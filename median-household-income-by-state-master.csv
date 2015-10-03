@@ -1,0 +1,157 @@
+year,state,median income,se,footnote
+2014,United States,"53,657",392,none
+2014,Alabama,"42,278","1,529",none
+2014,Alaska,"67,629","3,153",none
+2014,Arizona,"49,254","2,304",none
+2014,Arkansas,"44,922","2,546",none
+2014,California,"60,487",894,none
+2014,Colorado,"60,940","2,414",none
+2014,Connecticut,"70,161","2,665",none
+2014,Delaware,"57,522","2,970",none
+2014,D.C.,"68,277","4,402",none
+2014,Florida,"46,140",950,none
+2014,Georgia,"49,555","2,009",none
+2014,Hawaii,"71,223","2,676",none
+2014,Idaho,"53,438","2,572",none
+2014,Illinois,"54,916","1,625",none
+2014,Indiana,"48,060","1,943",none
+2014,Iowa,"57,810","3,425",none
+2014,Kansas,"53,444","2,863",none
+2014,Kentucky,"42,786","1,580",none
+2014,Louisiana,"42,406","1,862",none
+2014,Maine,"51,710","2,171",none
+2014,Maryland,"76,165","4,272",none
+2014,Massachusetts,"63,151","2,662",none
+2014,Michigan,"52,005","1,199",none
+2014,Minnesota,"67,244","3,207",none
+2014,Mississippi,"35,521","1,294",none
+2014,Missouri,"56,630","3,030",none
+2014,Montana,"51,102","1,778",none
+2014,Nebraska,"56,870","2,254",none
+2014,Nevada,"49,875","1,836",none
+2014,New Hampshire,"73,397","3,253",none
+2014,New Jersey,"65,243","2,693",none
+2014,New Mexico,"46,686","3,312",none
+2014,New York,"54,310","1,781",none
+2014,North Carolina,"46,784","1,710",none
+2014,North Dakota,"60,730","3,138",none
+2014,Ohio,"49,644","1,393",none
+2014,Oklahoma,"47,199","2,775",none
+2014,Oregon,"58,875","2,998",none
+2014,Pennsylvania,"55,173","2,266",none
+2014,Rhode Island,"58,633","4,001",none
+2014,South Carolina,"44,929","2,244",none
+2014,South Dakota,"53,053","3,542",none
+2014,Tennessee,"43,716","2,326",none
+2014,Texas,"53,875","1,344",none
+2014,Utah,"63,383","3,231",none
+2014,Vermont,"60,708","3,098",none
+2014,Virginia,"66,155","2,946",none
+2014,Washington,"59,068","2,195",none
+2014,West Virginia,"39,552","2,195",none
+2014,Wisconsin,"58,080","2,154",none
+2014,Wyoming,"55,690","2,019",none
+2013,United States,"54,462",665,none
+2013,Alabama,"48,094","5,601",none
+2013,Alaska,"73,658","5,535",none
+2013,Arizona,"53,472","4,436",none
+2013,Arkansas,"40,020","2,441",none
+2013,California,"61,789","1,841",none
+2013,Colorado,"69,023","4,197",none
+2013,Connecticut,"70,425","3,291",none
+2013,Delaware,"54,976","4,421",none
+2013,D.C.,"61,040","5,619",none
+2013,Florida,"49,326","2,861",none
+2013,Georgia,"47,761","4,305",none
+2013,Hawaii,"65,286","3,982",none
+2013,Idaho,"49,260","5,574",none
+2013,Illinois,"54,820","3,341",none
+2013,Indiana,"50,264","4,582",none
+2013,Iowa,"61,140","6,234",none
+2013,Kansas,"48,603","4,570",none
+2013,Kentucky,"45,613","3,988",none
+2013,Louisiana,"47,185","2,585",none
+2013,Maine,"55,856","3,926",none
+2013,Maryland,"70,488","3,019",none
+2013,Massachusetts,"63,552","5,390",none
+2013,Michigan,"57,493","1,613",none
+2013,Minnesota,"65,377","4,057",none
+2013,Mississippi,"32,867","2,775",none
+2013,Missouri,"47,061","4,202",none
+2013,Montana,"43,908","6,043",none
+2013,Nebraska,"58,566","4,286",none
+2013,Nevada,"52,694","3,230",none
+2013,New Hampshire,"70,230","4,032",none
+2013,New Jersey,"64,797","4,537",none
+2013,New Mexico,"40,823","4,480",none
+2013,New York,"50,784","2,304",none
+2013,North Carolina,"47,095","3,023",none
+2013,North Dakota,"60,120","3,507",none
+2013,Ohio,"51,578","2,488",none
+2013,Oklahoma,"46,917","3,498",none
+2013,Oregon,"49,801","2,934",none
+2013,Pennsylvania,"56,059","2,984",none
+2013,Rhode Island,"57,245","3,915",none
+2013,South Carolina,"44,276","2,427",none
+2013,South Dakota,"54,287","2,965",none
+2013,Tennessee,"44,071","3,491",none
+2013,Texas,"52,247","1,382",none
+2013,Utah,"62,046","1,578",none
+2013,Vermont,"66,585","4,079",none
+2013,Virginia,"66,986","2,785",none
+2013,Washington,"64,968","3,441",none
+2013,West Virginia,"43,774","3,511",none
+2013,Wisconsin,"52,572","2,672",none
+2013,Wyoming,"68,545","4,053",none
+2012,United States,"52,605",216,none
+2012,Alabama,"44,817","2,608",none
+2012,Alaska,"65,629","2,927",none
+2012,Arizona,"48,508","3,013",none
+2012,Arkansas,"40,233","2,900",none
+2012,California,"58,795","1,277",none
+2012,Colorado,"59,037","2,792",none
+2012,Connecticut,"66,247","2,942",none
+2012,Delaware,"50,496","2,038",none
+2012,D.C.,"67,277","3,785",none
+2012,Florida,"47,505","1,145",none
+2012,Georgia,"49,619","1,551",none
+2012,Hawaii,"58,014","2,325",none
+2012,Idaho,"49,414","3,272",none
+2012,Illinois,"53,349","1,369",none
+2012,Indiana,"47,595","1,843",none
+2012,Iowa,"55,106","2,205",none
+2012,Kansas,"51,560","1,868",none
+2012,Kentucky,"42,365","1,959",none
+2012,Louisiana,"40,302","1,661",none
+2012,Maine,"50,688","2,317",none
+2012,Maryland,"74,072","1,909",none
+2012,Massachusetts,"65,638","3,890",none
+2012,Michigan,"51,572","1,562",none
+2012,Minnesota,"63,719","1,381",none
+2012,Mississippi,"37,782","1,594",none
+2012,Missouri,"51,313","2,106",none
+2012,Montana,"46,492","2,645",none
+2012,Nebraska,"53,821","2,783",none
+2012,Nevada,"48,806","2,612",none
+2012,New Hampshire,"69,930","2,293",none
+2012,New Jersey,"68,768","2,021",none
+2012,New Mexico,"44,776","2,338",none
+2012,New York,"49,164","1,634",none
+2012,North Carolina,"42,847","1,334",none
+2012,North Dakota,"57,502","2,189",none
+2012,Ohio,"45,756","1,777",none
+2012,Oklahoma,"49,914","2,909",none
+2012,Oregon,"53,387","2,403",none
+2012,Pennsylvania,"53,520","1,449",none
+2012,Rhode Island,"57,810","2,641",none
+2012,South Carolina,"45,783","2,224",none
+2012,South Dakota,"50,953","1,758",none
+2012,Tennessee,"44,333","2,482",none
+2012,Texas,"53,542",980,none
+2012,Utah,"60,157","3,036",none
+2012,Vermont,"57,312","3,124",none
+2012,Virginia,"66,644","2,233",none
+2012,Washington,"64,123","2,319",none
+2012,West Virginia,"44,909","2,860",none
+2012,Wisconsin,"54,731","1,762",none
+2012,Wyoming,"59,302","2,908",none
