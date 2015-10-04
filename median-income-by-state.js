@@ -29,7 +29,17 @@ function init() {
 	createAxes();
 	
 	
-	var dataAll = d3.csv.parse("median-household-income-by-state-master.csv");
+	var dataAll = d3.csv("median-household-income-by-state-master.csv",
+		function(error, data) {
+			return {
+				year: data.year,
+				state: data.state,
+				medianIncome: data["median income"],
+				se: data.se,
+				footNote: data.footnote
+			};
+		}
+	);
 	
 	
 	//Set up HTML event listeners
