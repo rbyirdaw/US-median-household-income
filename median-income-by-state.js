@@ -28,20 +28,15 @@ function init() {
 	createDefPlot();
 	createAxes();
 	
+	var dataAll = [];
 	
-	var dataAll = d3.csv("median-household-income-by-state-master.csv",
+	d3.csv("median-household-income-by-state-master.csv",
 		function(error, data) {
 			if (error) {
 				console.log(error);
 			}
 			else {
-				return {
-					year: data.year,
-					state: data.state,
-					medianIncome: data["median income"],
-					se: data.se,
-					footNote: data.footnote
-				};
+				dataAll = data;
 			}
 		}
 	);
