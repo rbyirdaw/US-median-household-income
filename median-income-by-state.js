@@ -33,7 +33,7 @@ function init() {
 	d3.csv("median-household-income-by-state-master.csv",
 		function(error, data) {
 			if (error) {
-				console.log(error);
+				alert(error);
 			}
 			else {
 				dataAll = data;
