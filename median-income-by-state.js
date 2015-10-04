@@ -31,13 +31,18 @@ function init() {
 	
 	var dataAll = d3.csv("median-household-income-by-state-master.csv",
 		function(error, data) {
-			return {
-				year: data.year,
-				state: data.state,
-				medianIncome: data["median income"],
-				se: data.se,
-				footNote: data.footnote
-			};
+			if (error) {
+				console.log(error);
+			}
+			else {
+				return {
+					year: data.year,
+					state: data.state,
+					medianIncome: data["median income"],
+					se: data.se,
+					footNote: data.footnote
+				};
+			}
 		}
 	);
 	
