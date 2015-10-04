@@ -1,15 +1,15 @@
 year,state,median income,se,footnote
-2014,United States,"53,657",392,none
+2014,United States,"53,657","392",none
 2014,Alabama,"42,278","1,529",none
 2014,Alaska,"67,629","3,153",none
 2014,Arizona,"49,254","2,304",none
 2014,Arkansas,"44,922","2,546",none
-2014,California,"60,487",894,none
+2014,California,"60,487","894",none
 2014,Colorado,"60,940","2,414",none
 2014,Connecticut,"70,161","2,665",none
 2014,Delaware,"57,522","2,970",none
 2014,D.C.,"68,277","4,402",none
-2014,Florida,"46,140",950,none
+2014,Florida,"46,140","950",none
 2014,Georgia,"49,555","2,009",none
 2014,Hawaii,"71,223","2,676",none
 2014,Idaho,"53,438","2,572",none
@@ -50,8 +50,7 @@ year,state,median income,se,footnote
 2014,Washington,"59,068","2,195",none
 2014,West Virginia,"39,552","2,195",none
 2014,Wisconsin,"58,080","2,154",none
-2014,Wyoming,"55,690","2,019",none
-2013,United States,"54,462",665,none
+2013,United States,"54,462","665",none
 2013,Alabama,"48,094","5,601",none
 2013,Alaska,"73,658","5,535",none
 2013,Arizona,"53,472","4,436",none
@@ -102,8 +101,7 @@ year,state,median income,se,footnote
 2013,Washington,"64,968","3,441",none
 2013,West Virginia,"43,774","3,511",none
 2013,Wisconsin,"52,572","2,672",none
-2013,Wyoming,"68,545","4,053",none
-2012,United States,"52,605",216,none
+2012,United States,"52,605","216",none
 2012,Alabama,"44,817","2,608",none
 2012,Alaska,"65,629","2,927",none
 2012,Arizona,"48,508","3,013",none
@@ -147,11 +145,1438 @@ year,state,median income,se,footnote
 2012,South Carolina,"45,783","2,224",none
 2012,South Dakota,"50,953","1,758",none
 2012,Tennessee,"44,333","2,482",none
-2012,Texas,"53,542",980,none
+2012,Texas,"53,542","980",none
 2012,Utah,"60,157","3,036",none
 2012,Vermont,"57,312","3,124",none
 2012,Virginia,"66,644","2,233",none
 2012,Washington,"64,123","2,319",none
 2012,West Virginia,"44,909","2,860",none
 2012,Wisconsin,"54,731","1,762",none
-2012,Wyoming,"59,302","2,908",none
+2011,United States,"52,690","264",none
+2011,Alabama,"44,833","2,127",none
+2011,Alaska,"60,456","3,905",none
+2011,Arizona,"51,182","2,552",none
+2011,Arkansas,"43,477","1,946",none
+2011,California,"56,177","1,451",none
+2011,Colorado,"61,717","2,687",none
+2011,Connecticut,"68,860","3,173",none
+2011,Delaware,"57,539","1,837",none
+2011,D.C.,"58,161","2,220",none
+2011,Florida,"47,480","1,198",none
+2011,Georgia,"48,394","2,614",none
+2011,Hawaii,"62,157","2,664",none
+2011,Idaho,"49,958","3,672",none
+2011,Illinois,"53,304","1,446",none
+2011,Indiana,"46,786","2,431",none
+2011,Iowa,"52,864","2,078",none
+2011,Kansas,"48,577","2,053",none
+2011,Kentucky,"41,955","1,944",none
+2011,Louisiana,"42,799","2,031",none
+2011,Maine,"52,310","2,087",none
+2011,Maryland,"72,503","2,237",none
+2011,Massachusetts,"66,647","3,396",none
+2011,Michigan,"51,453","1,941",none
+2011,Minnesota,"60,865","2,505",none
+2011,Mississippi,"43,254","2,491",none
+2011,Missouri,"48,185","2,271",none
+2011,Montana,"42,398","2,143",none
+2011,Nebraska,"58,545","2,835",none
+2011,Nevada,"49,520","2,810",none
+2011,New Hampshire,"69,349","1,739",none
+2011,New Jersey,"65,621","3,187",none
+2011,New Mexico,"44,193","2,267",none
+2011,New York,"53,303","1,059",none
+2011,North Carolina,"47,587","1,642",none
+2011,North Dakota,"59,329","3,116",none
+2011,Ohio,"46,999","1,263",none
+2011,Oklahoma,"51,007","2,521",none
+2011,Oregon,"54,240","1,692",none
+2011,Pennsylvania,"52,538","1,783",none
+2011,Rhode Island,"51,615","2,403",none
+2011,South Carolina,"42,195","1,792",none
+2011,South Dakota,"49,710","2,260",none
+2011,Tennessee,"44,506","2,691",none
+2011,Texas,"51,630","1,214",none
+2011,Utah,"58,415","1,746",none
+2011,Vermont,"54,593","2,113",none
+2011,Virginia,"65,914","1,866",none
+2011,Washington,"59,844","2,087",none
+2011,West Virginia,"44,023","1,859",none
+2011,Wisconsin,"54,800","2,176",none
+2010,United States,"53,507","353",none
+2010,Alabama,"44,447","2,602",none
+2010,Alaska,"62,814","2,595",none
+2010,Arizona,"50,922","2,418",none
+2010,Arkansas,"41,900","2,675",none
+2010,California,"58,943","1,283",none
+2010,Colorado,"65,404","2,694",none
+2010,Connecticut,"71,665","2,275",none
+2010,Delaware,"59,955","2,449",none
+2010,D.C.,"61,816","3,619",none
+2010,Florida,"47,850","1,676",none
+2010,Georgia,"47,905","1,979",none
+2010,Hawaii,"64,651","2,966",none
+2010,Idaho,"51,090","2,029",none
+2010,Illinois,"55,083","1,600",none
+2010,Indiana,"50,101","2,794",none
+2010,Iowa,"53,224","1,457",none
+2010,Kansas,"50,008","1,972",none
+2010,Kentucky,"44,633","3,065",none
+2010,Louisiana,"42,675","3,527",none
+2010,Maine,"52,046","1,832",none
+2010,Maryland,"69,713","2,494",none
+2010,Massachusetts,"66,165","2,381",none
+2010,Michigan,"50,249","1,886",none
+2010,Minnesota,"56,814","1,744",none
+2010,Mississippi,"41,436","3,073",none
+2010,Missouri,"49,750","2,343",none
+2010,Montana,"44,824","2,005",none
+2010,Nebraska,"57,012","1,912",none
+2010,Nevada,"55,596","2,088",none
+2010,New Hampshire,"72,354","1,793",none
+2010,New Jersey,"68,374","2,653",none
+2010,New Mexico,"49,010","3,275",none
+2010,New York,"54,055","1,433",none
+2010,North Carolina,"47,593","2,088",none
+2010,North Dakota,"55,385","2,510",none
+2010,Ohio,"49,825","1,621",none
+2010,Oklahoma,"46,804","2,251",none
+2010,Oregon,"54,946","1,635",none
+2010,Pennsylvania,"52,462","1,637",none
+2010,Rhode Island,"56,055","1,879",none
+2010,South Carolina,"45,278","1,585",none
+2010,South Dakota,"49,246","2,220",none
+2010,Tennessee,"41,905","1,364",none
+2010,Texas,"51,324","1,259",none
+2010,Utah,"61,569","2,131",none
+2010,Vermont,"60,730","2,440",none
+2010,Virginia,"65,550","2,134",none
+2010,Washington,"60,985","2,236",none
+2010,West Virginia,"46,450","2,734",none
+2010,Wisconsin,"54,674","1,558",none
+2009,United States,"54,925","235",none
+2009,Alabama,"44,115","997",none
+2009,Alaska,"67,975","1,932",none
+2009,Arizona,"50,470","1,369",none
+2009,Arkansas,"40,317","1,003",none
+2009,California,"61,940","683",none
+2009,Colorado,"61,715","1,760",none
+2009,Connecticut,"71,558","2,547",none
+2009,Delaware,"57,504","1,965",none
+2009,D.C.,"58,637","2,304",none
+2009,Florida,"50,350","779",none
+2009,Georgia,"47,823","1,386",none
+2009,Hawaii,"61,405","2,232",none
+2009,Idaho,"51,616","1,395",none
+2009,Illinois,"58,338","1,038",none
+2009,Indiana,"48,887","1,197",none
+2009,Iowa,"55,967","1,694",none
+2009,Kansas,"49,342","1,973",none
+2009,Kentucky,"47,077","1,449",none
+2009,Louisiana,"50,132","2,001",none
+2009,Maine,"52,415","1,919",none
+2009,Maryland,"70,825","1,847",none
+2009,Massachusetts,"65,514","1,930",none
+2009,Michigan,"50,751","1,107",none
+2009,Minnesota,"61,891","1,365",none
+2009,Mississippi,"38,706","1,439",none
+2009,Missouri,"53,813","1,760",none
+2009,Montana,"44,619","1,106",none
+2009,Nebraska,"54,724","1,828",none
+2009,Nevada,"56,754","1,210",none
+2009,New Hampshire,"70,764","2,048",none
+2009,New Jersey,"71,477","2,117",none
+2009,New Mexico,"48,045","1,649",none
+2009,New York,"55,410","661",none
+2009,North Carolina,"46,240","636",none
+2009,North Dakota,"55,254","1,918",none
+2009,Ohio,"50,624","691",none
+2009,Oklahoma,"50,623","1,257",none
+2009,Oregon,"54,176","1,814",none
+2009,Pennsylvania,"53,154","1,034",none
+2009,Rhode Island,"56,974","1,596",none
+2009,South Carolina,"45,352","1,228",none
+2009,South Dakota,"50,566","1,422",none
+2009,Tennessee,"44,708","1,090",none
+2009,Texas,"52,385","820",none
+2009,Utah,"64,541","1,752",none
+2009,Vermont,"57,729","1,587",none
+2009,Virginia,"66,758","1,316",none
+2009,Washington,"66,638","1,323",none
+2009,West Virginia,"44,678","1,007",none
+2009,Wisconsin,"56,536","889",none
+2008,United States,"55,313","151",none
+2008,Alabama,"48,905","1,824",none
+2008,Alaska,"70,362","2,531",none
+2008,Arizona,"51,586","1,237",none
+2008,Arkansas,"43,528","1,313",none
+2008,California,"62,692","912",none
+2008,Colorado,"67,012","2,087",none
+2008,Connecticut,"71,124","2,970",none
+2008,Delaware,"55,751","1,526",none
+2008,D.C.,"61,126","1,939",none
+2008,Florida,"49,324","943",none
+2008,Georgia,"50,831","1,280",none
+2008,Hawaii,"67,648","1,628",none
+2008,Idaho,"52,143","1,848",none
+2008,Illinois,"58,558","1,457",none
+2008,Indiana,"51,153","1,303",none
+2008,Iowa,"55,136","1,422",none
+2008,Kansas,"52,645","1,550",none
+2008,Kentucky,"45,246","893",none
+2008,Louisiana,"43,503","1,634",none
+2008,Maine,"51,931","1,579",none
+2008,Maryland,"70,056","1,945",none
+2008,Massachusetts,"66,327","1,841",none
+2008,Michigan,"54,746","1,269",none
+2008,Minnesota,"60,395","1,569",none
+2008,Mississippi,"40,076","913",none
+2008,Missouri,"50,623","1,260",none
+2008,Montana,"47,172","1,940",none
+2008,Nebraska,"55,780","1,379",none
+2008,Nevada,"60,196","2,923",none
+2008,New Hampshire,"72,766","3,523",none
+2008,New Jersey,"71,810","2,526",none
+2008,New Mexico,"46,295","1,519",none
+2008,New York,"55,486","750",none
+2008,North Carolina,"47,205","930",none
+2008,North Dakota,"54,574","1,306",none
+2008,Ohio,"51,608","932",none
+2008,Oklahoma,"50,703","1,024",none
+2008,Oregon,"56,878","1,511",none
+2008,Pennsylvania,"56,521","648",none
+2008,Rhode Island,"58,543","2,638",none
+2008,South Carolina,"46,353","1,233",none
+2008,South Dakota,"56,739","1,094",none
+2008,Tennessee,"43,656","1,332",none
+2008,Texas,"51,120","741",none
+2008,Utah,"68,765","1,678",none
+2008,Vermont,"55,756","1,080",none
+2008,Virginia,"68,158","1,591",none
+2008,Washington,"62,271","2,222",none
+2008,West Virginia,"41,778","1,544",none
+2008,Wisconsin,"56,299","937",none
+2007,United States,"57,357","160",none
+2007,Alabama,"48,199","1,621",none
+2007,Alaska,"71,927","1,808",none
+2007,Arizona,"53,911","1,776",none
+2007,Arkansas,"46,581","1,539",none
+2007,California,"63,638","706",none
+2007,Colorado,"69,812","1,158",none
+2007,Connecticut,"73,238","2,340",none
+2007,Delaware,"62,331","2,465",none
+2007,D.C.,"57,985","1,253",none
+2007,Florida,"52,289","651",none
+2007,Georgia,"55,540","1,231",none
+2007,Hawaii,"73,102","2,426",none
+2007,Idaho,"56,160","1,474",none
+2007,Illinois,"59,953","1,085",none
+2007,Indiana,"54,183","1,433",none
+2007,Iowa,"55,844","1,657",none
+2007,Kansas,"55,375","2,061",none
+2007,Kentucky,"45,047","1,383",none
+2007,Louisiana,"47,172","1,070",none
+2007,Maine,"54,687","1,596",none
+2007,Maryland,"74,938","1,897",none
+2007,Massachusetts,"66,755","2,547",none
+2007,Michigan,"56,372","911",none
+2007,Minnesota,"66,292","2,156",none
+2007,Mississippi,"42,566","1,086",none
+2007,Missouri,"52,530","1,261",none
+2007,Montana,"49,846","1,940",none
+2007,Nebraska,"56,148","1,575",none
+2007,Nevada,"61,725","1,478",none
+2007,New Hampshire,"77,160","2,108",none
+2007,New Jersey,"69,090","1,665",none
+2007,New Mexico,"50,647","1,683",none
+2007,New York,"55,885","1,048",none
+2007,North Carolina,"49,684","1,224",none
+2007,North Dakota,"53,900","1,462",none
+2007,Ohio,"56,062","1,239",none
+2007,Oklahoma,"49,345","1,659",none
+2007,Oregon,"57,361","1,549",none
+2007,Pennsylvania,"55,307","1,064",none
+2007,Rhode Island,"61,898","2,111",none
+2007,South Carolina,"50,484","1,773",none
+2007,South Dakota,"53,001","1,028",none
+2007,Tennessee,"47,037","1,274",none
+2007,Texas,"52,584","799",none
+2007,Utah,"61,121","1,391",none
+2007,Vermont,"54,111","1,596",none
+2007,Virginia,"67,552","1,559",none
+2007,Washington,"66,317","1,982",none
+2007,West Virginia,"48,061","1,129",none
+2007,Wisconsin,"58,549","1,187",none
+2006,United States,"56,598","243",none
+2006,Alabama,"44,563","1,191",none
+2006,Alaska,"66,246","1,755",none
+2006,Arizona,"54,785","1,463",none
+2006,Arkansas,"43,513","901",none
+2006,California,"64,956","816",none
+2006,Colorado,"65,400","1,789",none
+2006,Connecticut,"73,275","2,539",none
+2006,Delaware,"61,573","2,031",none
+2006,D.C.,"56,922","1,971",none
+2006,Florida,"53,633","739",none
+2006,Georgia,"57,940","1,421",none
+2006,Hawaii,"71,004","1,845",none
+2006,Idaho,"54,264","1,541",none
+2006,Illinois,"57,150","1,370",none
+2006,Indiana,"53,317","1,451",none
+2006,Iowa,"56,510","1,751",none
+2006,Kansas,"53,487","1,470",none
+2006,Kentucky,"46,364","1,234",none
+2006,Louisiana,"42,844","1,673",none
+2006,Maine,"53,593","2,110",none
+2006,Maryland,"74,759","1,880",none
+2006,Massachusetts,"64,969","2,441",none
+2006,Michigan,"57,122","1,134",none
+2006,Minnesota,"66,003","1,430",none
+2006,Mississippi,"40,784","1,859",none
+2006,Missouri,"52,345","1,646",none
+2006,Montana,"48,266","818",none
+2006,Nebraska,"56,532","1,750",none
+2006,Nevada,"61,390","1,470",none
+2006,New Hampshire,"72,766","1,737",none
+2006,New Jersey,"79,915","2,324",none
+2006,New Mexico,"47,001","1,476",none
+2006,New York,"56,623","1,161",none
+2006,North Carolina,"46,730","957",none
+2006,North Dakota,"48,198","1,650",none
+2006,Ohio,"53,896","743",none
+2006,Oklahoma,"45,604","1,875",none
+2006,Oregon,"55,295","1,639",none
+2006,Pennsylvania,"56,922","1,020",none
+2006,Rhode Island,"63,097","2,141",none
+2006,South Carolina,"46,519","1,582",none
+2006,South Dakota,"53,341","1,927",none
+2006,Tennessee,"47,782","887",none
+2006,Texas,"50,851","972",none
+2006,Utah,"64,145","1,962",none
+2006,Vermont,"61,036","1,487",none
+2006,Virginia,"67,070","1,869",none
+2006,Washington,"64,256","1,461",none
+2006,West Virginia,"45,112","1,425",none
+2006,Wisconsin,"60,697","1,346",none
+2005,United States,"56,160","188",none
+2005,Alabama,"45,036","1,473",none
+2005,Alaska,"67,755","1,614",none
+2005,Arizona,"54,849","1,541",none
+2005,Arkansas,"44,439","1,587",none
+2005,California,"62,741","558",none
+2005,Colorado,"61,158","1,560",none
+2005,Connecticut,"68,899","1,980",none
+2005,Delaware,"62,111","1,304",none
+2005,D.C.,"54,544","2,627",none
+2005,Florida,"52,115","982",none
+2005,Georgia,"55,675","1,016",none
+2005,Hawaii,"72,234","1,469",none
+2005,Idaho,"53,553","1,520",none
+2005,Illinois,"58,671","1,195",none
+2005,Indiana,"51,445","1,333",none
+2005,Iowa,"56,371","1,623",none
+2005,Kansas,"50,948","1,194",none
+2005,Kentucky,"44,489","1,089",none
+2005,Louisiana,"45,140","1,572",none
+2005,Maine,"53,246","1,737",none
+2005,Maryland,"73,357","1,791",none
+2005,Massachusetts,"67,908","2,126",none
+2005,Michigan,"55,683","1,109",none
+2005,Minnesota,"65,723","1,508",none
+2005,Mississippi,"39,853","1,566",none
+2005,Missouri,"52,111","1,199",none
+2005,Montana,"45,233","1,407",none
+2005,Nebraska,"58,096","1,754",none
+2005,Nevada,"58,442","2,037",none
+2005,New Hampshire,"69,080","2,456",none
+2005,New Jersey,"76,819","2,736",none
+2005,New Mexico,"47,214","2,061",none
+2005,New York,"57,190","1,003",none
+2005,North Carolina,"50,983","1,169",none
+2005,North Dakota,"51,148","1,480",none
+2005,Ohio,"53,586","1,268",none
+2005,Oklahoma,"45,636","1,757",none
+2005,Oregon,"53,533","1,686",none
+2005,Pennsylvania,"56,128","903",none
+2005,Rhode Island,"59,988","1,765",none
+2005,South Carolina,"48,770","1,460",none
+2005,South Dakota,"52,311","1,660",none
+2005,Tennessee,"47,771","1,444",none
+2005,Texas,"50,215","509",none
+2005,Utah,"66,448","1,580",none
+2005,Vermont,"61,467","1,587",none
+2005,Virginia,"62,934","1,437",none
+2005,Washington,"61,397","1,267",none
+2005,West Virginia,"44,181","1,304",none
+2005,Wisconsin,"54,128","1,428",none
+2004,United States,"55,565","246",none
+2004,Alabama,"45,908","1,633",none
+2004,Alaska,"69,012","2,596",none
+2004,Arizona,"54,954","1,433",none
+2004,Arkansas,"43,847","1,246",none
+2004,California,"61,692","827",none
+2004,Colorado,"63,777","1,993",none
+2004,Connecticut,"69,059","2,065",none
+2004,Delaware,"60,221","1,781",none
+2004,D.C.,"54,459","2,336",none
+2004,Florida,"50,804","792",none
+2004,Georgia,"51,367","775",none
+2004,Hawaii,"70,490","2,118",none
+2004,Idaho,"55,595","1,738",none
+2004,Illinois,"57,750","1,031",none
+2004,Indiana,"53,052","1,443",none
+2004,Iowa,"54,383","1,906",none
+2004,Kansas,"51,469","2,192",none
+2004,Kentucky,"44,631","1,527",none
+2004,Louisiana,"45,658","1,558",none
+2004,Maine,"51,799","1,533",none
+2004,Maryland,"71,569","2,121",none
+2004,Massachusetts,"65,197","2,089",none
+2004,Michigan,"52,961","1,075",none
+2004,Minnesota,"70,317","1,341",none
+2004,Mississippi,"43,560","1,419",none
+2004,Missouri,"52,812","1,345",none
+2004,Montana,"42,558","889",none
+2004,Nebraska,"54,878","1,669",none
+2004,Nevada,"59,162","1,732",none
+2004,New Hampshire,"71,208","1,659",none
+2004,New Jersey,"69,278","1,608",none
+2004,New Mexico,"49,584","1,985",none
+2004,New York,"55,960","993",none
+2004,North Carolina,"50,432","1,018",none
+2004,North Dakota,"49,156","1,568",none
+2004,Ohio,"53,962","1,225",none
+2004,Oklahoma,"49,650","1,406",none
+2004,Oregon,"51,379","1,317",none
+2004,Pennsylvania,"55,280","1,302",none
+2004,Rhode Island,"60,079","2,472",none
+2004,South Carolina,"48,493","1,280",none
+2004,South Dakota,"51,521","1,247",none
+2004,Tennessee,"47,717","1,325",none
+2004,Texas,"51,884","688",none
+2004,Utah,"63,758","1,162",none
+2004,Vermont,"59,319","1,592",none
+2004,Virginia,"64,097","1,399",none
+2004,Washington,"62,569","1,339",none
+2004,West Virginia,"41,827","1,470",none
+2004,Wisconsin,"57,317","1,676",none
+2003,United States,"55,759","242",none
+2003,Alabama,"47,954","2,034",none
+2003,Alaska,"66,724","1,263",none
+2003,Arizona,"52,989","1,830",none
+2003,Arkansas,"41,193","999",none
+2003,California,"63,459","1,054",none
+2003,Colorado,"64,283","1,491",none
+2003,Connecticut,"70,751","2,009",none
+2003,Delaware,"63,097","1,774",none
+2003,D.C.,"57,980","1,825",none
+2003,Florida,"50,165","977",none
+2003,Georgia,"54,626","1,260",none
+2003,Hawaii,"66,720","1,715",none
+2003,Idaho,"54,541","1,264",none
+2003,Illinois,"58,121","1,380",none
+2003,Indiana,"54,609","1,234",none
+2003,Iowa,"53,269","1,138",none
+2003,Kansas,"56,935","1,707",none
+2003,Kentucky,"47,544","1,103",none
+2003,Louisiana,"43,130","1,420",none
+2003,Maine,"47,772","1,216",none
+2003,Maryland,"67,338","1,574",none
+2003,Massachusetts,"65,589","1,227",none
+2003,Michigan,"57,952","1,223",none
+2003,Minnesota,"67,993","1,581",none
+2003,Mississippi,"42,127","1,433",none
+2003,Missouri,"56,330","1,126",none
+2003,Montana,"43,904","1,373",none
+2003,Nebraska,"56,603","1,681",none
+2003,Nevada,"58,161","2,000",none
+2003,New Hampshire,"71,526","1,679",none
+2003,New Jersey,"72,141","1,317",none
+2003,New Mexico,"45,187","1,470",none
+2003,New York,"55,076","1,122",none
+2003,North Carolina,"47,985","1,211",none
+2003,North Dakota,"52,016","1,097",none
+2003,Ohio,"56,019","1,197",none
+2003,Oklahoma,"46,213","1,005",none
+2003,Oregon,"53,596","1,242",none
+2003,Pennsylvania,"55,263","1,001",none
+2003,Rhode Island,"57,552","1,608",none
+2003,South Carolina,"49,530","1,443",none
+2003,South Dakota,"50,873","1,292",none
+2003,Tennessee,"48,299","1,520",none
+2003,Texas,"50,549","981",none
+2003,Utah,"63,427","1,161",none
+2003,Vermont,"55,685","1,258",none
+2003,Virginia,"70,516","2,012",none
+2003,Washington,"61,152","1,796",none
+2003,West Virginia,"42,172","1,278",none
+2003,Wisconsin,"59,557","1,259",none
+2002,United States,"55,807","183",none
+2002,Alabama,"49,483","1,398",none
+2002,Alaska,"69,447","1,412",none
+2002,Arizona,"52,287","1,320",none
+2002,Arkansas,"42,619","1,024",none
+2002,California,"62,424","1,008",none
+2002,Colorado,"63,551","1,927",none
+2002,Connecticut,"70,253","1,803",none
+2002,Delaware,"65,336","2,217",none
+2002,D.C.,"51,413","1,309",none
+2002,Florida,"50,037","1,090",none
+2002,Georgia,"56,505","1,457",none
+2002,Hawaii,"62,247","1,804",none
+2002,Idaho,"49,630","1,475",none
+2002,Illinois,"56,203","1,126",none
+2002,Indiana,"54,015","984",none
+2002,Iowa,"54,018","1,516",none
+2002,Kansas,"56,084","1,378",none
+2002,Kentucky,"48,376","1,150",none
+2002,Louisiana,"44,752","1,655",none
+2002,Maine,"48,496","1,113",none
+2002,Maryland,"74,228","2,016",none
+2002,Massachusetts,"65,606","1,517",none
+2002,Michigan,"56,210","1,467",none
+2002,Minnesota,"71,879","1,574",none
+2002,Mississippi,"40,639","1,008",none
+2002,Missouri,"56,290","1,413",none
+2002,Montana,"45,840","1,595",none
+2002,Nebraska,"56,316","1,366",none
+2002,Nevada,"59,162","1,528",none
+2002,New Hampshire,"72,799","1,696",none
+2002,New Jersey,"71,808","2,112",none
+2002,New Mexico,"46,659","1,396",none
+2002,New York,"55,224","763",none
+2002,North Carolina,"48,051","942",none
+2002,North Dakota,"47,637","1,084",none
+2002,Ohio,"56,169","1,022",none
+2002,Oklahoma,"47,976","807",none
+2002,Oregon,"55,008","1,125",none
+2002,Pennsylvania,"55,924","1,046",none
+2002,Rhode Island,"55,818","1,151",none
+2002,South Carolina,"49,758","1,611",none
+2002,South Dakota,"49,838","1,254",none
+2002,Tennessee,"48,729","1,462",none
+2002,Texas,"52,833","741",none
+2002,Utah,"62,982","1,508",none
+2002,Vermont,"56,584","1,092",none
+2002,Virginia,"65,311","1,698",none
+2002,Washington,"59,458","1,269",none
+2002,West Virginia,"38,634","920",none
+2002,Wisconsin,"60,405","1,245",none
+2001,United States,"56,466","172",none
+2001,Alabama,"47,015","1,345",none
+2001,Alaska,"76,705","2,690",none
+2001,Arizona,"57,103","1,927",none
+2001,Arkansas,"44,580","1,530",none
+2001,California,"63,198","972",none
+2001,Colorado,"66,053","1,591",none
+2001,Connecticut,"71,334","1,658",none
+2001,Delaware,"66,327","1,963",none
+2001,D.C.,"55,050","1,368",none
+2001,Florida,"48,701","558",none
+2001,Georgia,"56,932","1,435",none
+2001,Hawaii,"63,434","1,679",none
+2001,Idaho,"51,135","1,292",none
+2001,Illinois,"61,739","1,175",none
+2001,Indiana,"53,994","1,268",none
+2001,Iowa,"54,792","1,515",none
+2001,Kansas,"55,379","1,491",none
+2001,Kentucky,"51,397","1,349",none
+2001,Louisiana,"44,557","1,598",none
+2001,Maine,"48,957","1,273",none
+2001,Maryland,"71,579","2,209",none
+2001,Massachusetts,"69,872","2,030",none
+2001,Michigan,"60,236","1,161",none
+2001,Minnesota,"70,444","1,516",none
+2001,Mississippi,"40,331","1,586",none
+2001,Missouri,"55,278","1,610",none
+2001,Montana,"42,958","986",none
+2001,Nebraska,"58,316","1,492",none
+2001,Nevada,"60,712","1,511",none
+2001,New Hampshire,"68,639","961",none
+2001,New Jersey,"69,227","1,248",none
+2001,New Mexico,"44,293","1,655",none
+2001,New York,"56,314","802",none
+2001,North Carolina,"51,029","1,272",none
+2001,North Dakota,"47,862","1,075",none
+2001,Ohio,"55,874","884",none
+2001,Oklahoma,"47,616","923",none
+2001,Oregon,"55,189","1,006",none
+2001,Pennsylvania,"58,166","967",none
+2001,Rhode Island,"61,140","1,534",none
+2001,South Carolina,"50,460","1,368",none
+2001,South Dakota,"53,047","1,145",none
+2001,Tennessee,"47,848","1,058",none
+2001,Texas,"54,637","685",none
+2001,Utah,"63,305","2,141",none
+2001,Vermont,"54,549","1,262",none
+2001,Virginia,"67,181","1,535",none
+2001,Washington,"56,817","1,690",none
+2001,West Virginia,"39,678","901",none
+2001,Wisconsin,"60,636","1,502",none
+2000,United States,"57,724","181",none
+2000,Alabama,"48,697","1,474",none
+2000,Alaska,"72,649","1,593",none
+2000,Arizona,"54,690","1,663",none
+2000,Arkansas,"40,825","1,061",none
+2000,California,"64,358","943",none
+2000,Colorado,"66,316","1,701",none
+2000,Connecticut,"68,972","1,865",none
+2000,Delaware,"69,237","2,073",none
+2000,D.C.,"56,668","1,474",none
+2000,Florida,"53,415","1,021",none
+2000,Georgia,"57,601","1,142",none
+2000,Hawaii,"70,860","1,640",none
+2000,Idaho,"51,704","1,639",none
+2000,Illinois,"63,324","1,328",none
+2000,Indiana,"56,177","933",none
+2000,Iowa,"56,350","1,115",none
+2000,Kansas,"56,444","1,606",none
+2000,Kentucky,"49,854","1,166",none
+2000,Louisiana,"42,228","1,138",none
+2000,Maine,"51,230","1,173",none
+2000,Maryland,"74,969","1,925",none
+2000,Massachusetts,"64,272","1,865",none
+2000,Michigan,"62,566","1,505",none
+2000,Minnesota,"74,579","2,341",none
+2000,Mississippi,"47,151","1,861",none
+2000,Missouri,"61,995","1,632",none
+2000,Montana,"45,059","1,376",none
+2000,Nebraska,"57,394","1,399",none
+2000,Nevada,"62,904","1,390",none
+2000,New Hampshire,"70,008","1,709",none
+2000,New Jersey,"69,292","1,362",none
+2000,New Mexico,"48,242","1,716",none
+2000,New York,"56,011","799",none
+2000,North Carolina,"52,675","1,108",none
+2000,North Dakota,"49,484","1,464",none
+2000,Ohio,"59,060","1,006",none
+2000,Oklahoma,"44,584","975",none
+2000,Oregon,"58,424","1,287",none
+2000,Pennsylvania,"57,979","968",none
+2000,Rhode Island,"58,008","1,399",none
+2000,South Carolina,"51,648","1,288",none
+2000,South Dakota,"50,142","944",none
+2000,Tennessee,"46,872","1,278",none
+2000,Texas,"53,076","1,079",none
+2000,Utah,"65,367","1,431",none
+2000,Vermont,"54,430","1,266",none
+2000,Virginia,"64,835","1,464",none
+2000,Washington,"58,459","1,665",none
+2000,West Virginia,"40,431","887",none
+2000,Wisconsin,"61,983","1,309",none
+1999,United States,"57,843","270",none
+1999,Alabama,"51,525","1,690",none
+1999,Alaska,"73,051","3,164",none
+1999,Arizona,"52,582","1,610",none
+1999,Arkansas,"42,188","1,458",none
+1999,California,"62,011","999",none
+1999,Colorado,"68,476","2,108",none
+1999,Connecticut,"71,909","3,263",none
+1999,Delaware,"66,274","3,242",none
+1999,D.C.,"54,963","2,273",none
+1999,Florida,"50,928","891",none
+1999,Georgia,"56,036","1,926",none
+1999,Hawaii,"63,255","2,604",none
+1999,Idaho,"50,884","2,008",none
+1999,Illinois,"65,850","1,461",none
+1999,Indiana,"58,044","2,443",none
+1999,Iowa,"58,414","1,606",none
+1999,Kansas,"53,084","2,954",none
+1999,Kentucky,"47,953","2,109",none
+1999,Louisiana,"46,412","1,768",none
+1999,Maine,"55,236","1,875",none
+1999,Maryland,"74,201","3,151",none
+1999,Massachusetts,"62,546","2,875",none
+1999,Michigan,"65,508","1,458",none
+1999,Minnesota,"66,857","2,170",none
+1999,Mississippi,"46,162","2,001",none
+1999,Missouri,"58,819","1,693",none
+1999,Montana,"44,115","1,373",none
+1999,Nebraska,"54,900","1,942",none
+1999,Nevada,"58,930","2,507",none
+1999,New Hampshire,"65,459","2,774",none
+1999,New Jersey,"70,689","1,997",none
+1999,New Mexico,"46,298","2,482",none
+1999,New York,"56,838","1,249",none
+1999,North Carolina,"52,950","1,364",none
+1999,North Dakota,"46,425","1,966",none
+1999,Ohio,"56,127","1,406",none
+1999,Oklahoma,"46,453","2,119",none
+1999,Oregon,"57,733","1,780",none
+1999,Pennsylvania,"53,667","1,622",none
+1999,Rhode Island,"60,718","2,814",none
+1999,South Carolina,"51,825","2,456",none
+1999,South Dakota,"50,923","1,342",none
+1999,Tennessee,"51,910","1,862",none
+1999,Texas,"54,989","1,450",none
+1999,Utah,"65,452","2,295",none
+1999,Vermont,"59,105","2,000",none
+1999,Virginia,"64,945","2,516",none
+1999,Washington,"64,632","2,956",none
+1999,West Virginia,"41,641","1,633",none
+1999,Wisconsin,"64,908","2,669",none
+1998,United States,"56,445","334",none
+1998,Alabama,"52,643","1,897",none
+1998,Alaska,"73,584","3,083",none
+1998,Arizona,"53,839","1,822",none
+1998,Arkansas,"40,158","1,684",none
+1998,California,"59,419","838",none
+1998,Colorado,"67,642","1,576",none
+1998,Connecticut,"67,510","3,960",none
+1998,Delaware,"60,180","2,545",none
+1998,D.C.,"48,531","1,903",none
+1998,Florida,"50,673","1,113",none
+1998,Georgia,"56,126","1,711",none
+1998,Hawaii,"59,264","3,439",none
+1998,Idaho,"53,244","1,582",none
+1998,Illinois,"62,677","1,791",none
+1998,Indiana,"57,673","2,307",none
+1998,Iowa,"53,736","1,745",none
+1998,Kansas,"53,289","2,347",none
+1998,Kentucky,"52,623","2,193",none
+1998,Louisiana,"46,066","2,410",none
+1998,Maine,"51,735","1,523",none
+1998,Maryland,"72,603","3,137",none
+1998,Massachusetts,"61,467","2,847",none
+1998,Michigan,"60,707","1,331",none
+1998,Minnesota,"69,569","3,070",none
+1998,Mississippi,"42,270","1,681",none
+1998,Missouri,"58,355","2,712",none
+1998,Montana,"45,837","1,645",none
+1998,Nebraska,"52,857","2,249",none
+1998,Nevada,"57,709","1,778",none
+1998,New Hampshire,"65,260","2,709",none
+1998,New Jersey,"72,327","2,084",none
+1998,New Mexico,"45,787","2,029",none
+1998,New York,"54,281","1,128",none
+1998,North Carolina,"52,022","1,484",none
+1998,North Dakota,"43,989","1,711",none
+1998,Ohio,"56,503","2,288",none
+1998,Oklahoma,"48,958","1,788",none
+1998,Oregon,"56,709","2,797",none
+1998,Pennsylvania,"56,634","1,568",none
+1998,Rhode Island,"59,059","3,857",none
+1998,South Carolina,"48,290","1,902",none
+1998,South Dakota,"47,592","1,470",none
+1998,Tennessee,"49,486","1,897",none
+1998,Texas,"51,942","961",none
+1998,Utah,"64,304","1,996",none
+1998,Vermont,"57,152","2,309",none
+1998,Virginia,"62,932","3,186",none
+1998,Washington,"68,836","2,002",none
+1998,West Virginia,"38,763","1,132",none
+1998,Wisconsin,"59,990","1,845",none
+1997,United States,"54,443","252",none
+1997,Alabama,"46,990","2,364",none
+1997,Alaska,"70,610","1,851",none
+1997,Arizona,"48,168","1,908",none
+1997,Arkansas,"38,490","1,698",none
+1997,California,"58,399","1,271",none
+1997,Colorado,"63,606","2,860",none
+1997,Connecticut,"64,712","2,926",none
+1997,Delaware,"63,312","3,034",none
+1997,D.C.,"46,874","1,448",none
+1997,Florida,"47,749","858",none
+1997,Georgia,"53,940","1,348",none
+1997,Hawaii,"60,224","2,058",none
+1997,Idaho,"49,145","1,970",none
+1997,Illinois,"60,737","1,151",none
+1997,Indiana,"57,215","1,740",none
+1997,Iowa,"49,703","1,886",none
+1997,Kansas,"53,657","2,375",none
+1997,Kentucky,"49,216","2,441",none
+1997,Louisiana,"48,933","2,282",none
+1997,Maine,"48,215","1,914",none
+1997,Maryland,"68,685","2,172",none
+1997,Massachusetts,"61,826","2,035",none
+1997,Michigan,"56,999","1,630",none
+1997,Minnesota,"62,622","2,222",none
+1997,Mississippi,"41,929","2,039",none
+1997,Missouri,"53,778","3,031",none
+1997,Montana,"42,978","1,685",none
+1997,Nebraska,"51,040","2,248",none
+1997,Nevada,"57,163","2,319",none
+1997,New Hampshire,"60,318","2,360",none
+1997,New Jersey,"70,650","2,095",none
+1997,New Mexico,"44,264","1,702",none
+1997,New York,"52,667","933",none
+1997,North Carolina,"52,729","1,349",none
+1997,North Dakota,"46,581","2,002",none
+1997,Ohio,"53,162","1,315",none
+1997,Oklahoma,"46,125","1,508",none
+1997,Oregon,"54,799","2,631",none
+1997,Pennsylvania,"55,196","1,418",none
+1997,Rhode Island,"51,195","3,288",none
+1997,South Carolina,"50,407","2,367",none
+1997,South Dakota,"43,687","1,685",none
+1997,Tennessee,"45,073","1,998",none
+1997,Texas,"51,604","1,295",none
+1997,Utah,"62,932","2,626",none
+1997,Vermont,"51,571","2,541",none
+1997,Virginia,"63,200","2,791",none
+1997,Washington,"65,561","2,523",none
+1997,West Virginia,"40,441","1,935",none
+1997,Wisconsin,"58,254","1,692",none
+1996,United States,"53,345","269",none
+1996,Alabama,"45,545","1,891",none
+1996,Alaska,"79,328","2,866",none
+1996,Arizona,"47,551","1,915",none
+1996,Arkansas,"40,767","1,470",none
+1996,California,"58,335","1,229",none
+1996,Colorado,"61,549","1,998",none
+1996,Connecticut,"63,306","4,640",none
+1996,Delaware,"59,082","2,107",none
+1996,D.C.,"48,046","2,372",none
+1996,Florida,"46,054","771",none
+1996,Georgia,"48,842","2,504",none
+1996,Hawaii,"62,784","2,845",none
+1996,Idaho,"52,168","2,016",none
+1996,Illinois,"59,451","1,664",none
+1996,Indiana,"52,827","1,951",none
+1996,Iowa,"49,914","2,295",none
+1996,Kansas,"48,976","2,194",none
+1996,Kentucky,"48,718","2,163",none
+1996,Louisiana,"45,485","1,939",none
+1996,Maine,"52,149","1,820",none
+1996,Maryland,"66,123","3,855",none
+1996,Massachusetts,"59,360","2,904",none
+1996,Michigan,"58,956","1,718",none
+1996,Minnesota,"61,611","1,841",none
+1996,Mississippi,"40,096","1,978",none
+1996,Missouri,"51,501","2,274",none
+1996,Montana,"43,113","2,354",none
+1996,Nebraska,"51,124","2,255",none
+1996,Nevada,"57,927","2,427",none
+1996,New Hampshire,"59,230","2,606",none
+1996,New Jersey,"71,346","1,829",none
+1996,New Mexico,"37,705","1,640",none
+1996,New York,"53,222","1,121",none
+1996,North Carolina,"53,509","1,515",none
+1996,North Dakota,"47,300","1,780",none
+1996,Ohio,"51,208","1,598",none
+1996,Oklahoma,"41,238","1,637",none
+1996,Oregon,"53,345","1,915",none
+1996,Pennsylvania,"52,454","1,464",none
+1996,Rhode Island,"55,591","1,557",none
+1996,South Carolina,"52,102","2,112",none
+1996,South Dakota,"44,378","1,508",none
+1996,Tennessee,"46,278","1,634",none
+1996,Texas,"49,708","1,147",none
+1996,Utah,"55,669","1,999",none
+1996,Vermont,"48,635","1,879",none
+1996,Virginia,"58,935","2,193",none
+1996,Washington,"55,125","2,417",none
+1996,West Virginia,"37,947","1,955",none
+1996,Wisconsin,"60,123","2,675",none
+1995,United States,"52,604","304",none
+1995,Alabama,"40,123","1,954",none
+1995,Alaska,"74,028","3,100",none
+1995,Arizona,"47,644","2,099",none
+1995,Arkansas,"39,850","1,542",none
+1995,California,"57,132","1,116",none
+1995,Colorado,"62,839","2,396",none
+1995,Connecticut,"62,124","3,503",none
+1995,Delaware,"53,919","2,853",none
+1995,D.C.,"47,466","1,825",none
+1995,Florida,"45,918","945",none
+1995,Georgia,"52,639","1,385",none
+1995,Hawaii,"66,150","1,994",none
+1995,Idaho,"50,443","1,723",none
+1995,Illinois,"58,771","1,351",none
+1995,Indiana,"51,537","2,229",none
+1995,Iowa,"54,831","1,454",none
+1995,Kansas,"46,838","1,422",none
+1995,Kentucky,"46,018","1,774",none
+1995,Louisiana,"43,145","1,683",none
+1995,Maine,"52,267","1,680",none
+1995,Maryland,"63,356","2,512",none
+1995,Massachusetts,"59,547","2,277",none
+1995,Michigan,"56,232","1,534",none
+1995,Minnesota,"58,558","2,853",none
+1995,Mississippi,"40,967","1,587",none
+1995,Missouri,"53,760","2,120",none
+1995,Montana,"42,849","1,706",none
+1995,Nebraska,"50,833","1,783",none
+1995,Nevada,"55,704","2,028",none
+1995,New Hampshire,"60,469","2,402",none
+1995,New Jersey,"67,806","2,161",none
+1995,New Mexico,"40,123","1,698",none
+1995,New York,"50,986","1,105",none
+1995,North Carolina,"49,367","1,371",none
+1995,North Dakota,"44,905","1,879",none
+1995,Ohio,"53,939","1,525",none
+1995,Oklahoma,"40,617","1,358",none
+1995,Oregon,"56,151","1,497",none
+1995,Pennsylvania,"53,295","1,054",none
+1995,Rhode Island,"54,584","2,120",none
+1995,South Carolina,"44,877","2,161",none
+1995,South Dakota,"45,660","2,485",none
+1995,Tennessee,"44,791","1,957",none
+1995,Texas,"49,459","979",none
+1995,Utah,"56,315","1,419",none
+1995,Vermont,"52,215","1,917",none
+1995,Virginia,"55,917","2,147",none
+1995,Washington,"54,907","1,933",none
+1995,West Virginia,"38,408","1,343",none
+1995,Wisconsin,"63,223","2,035",none
+1994,United States,"51,006","232",none
+1994,Alabama,"42,994","2,465",none
+1994,Alaska,"71,721","2,362",none
+1994,Arizona,"49,471","1,222",none
+1994,Arkansas,"40,416","1,492",none
+1994,California,"55,855","979",none
+1994,Colorado,"59,811","2,286",none
+1994,Connecticut,"64,971","2,522",none
+1994,Delaware,"56,712","1,883",none
+1994,D.C.,"47,611","1,750",none
+1994,Florida,"46,311","999",none
+1994,Georgia,"49,746","1,957",none
+1994,Hawaii,"66,801","3,831",none
+1994,Idaho,"49,856","2,020",none
+1994,Illinois,"55,460","1,263",none
+1994,Indiana,"44,041","1,631",none
+1994,Iowa,"52,295","2,024",none
+1994,Kansas,"44,775","1,682",none
+1994,Kentucky,"42,044","1,625",none
+1994,Louisiana,"40,591","2,373",none
+1994,Maine,"47,927","2,430",none
+1994,Maryland,"61,968","2,213",none
+1994,Massachusetts,"64,027","1,676",none
+1994,Michigan,"55,781","1,083",none
+1994,Minnesota,"53,188","2,150",none
+1994,Mississippi,"40,155","1,189",none
+1994,Missouri,"47,728","2,280",none
+1994,Montana,"43,682","1,970",none
+1994,Nebraska,"50,263","1,764",none
+1994,Nevada,"56,709","2,425",none
+1994,New Hampshire,"55,719","2,904",none
+1994,New Jersey,"66,841","1,682",none
+1994,New Mexico,"42,534","2,185",none
+1994,New York,"50,429","754",none
+1994,North Carolina,"47,607","1,059",none
+1994,North Dakota,"44,705","1,763",none
+1994,Ohio,"50,360","923",none
+1994,Oklahoma,"42,670","1,918",none
+1994,Oregon,"49,729","1,783",none
+1994,Pennsylvania,"50,693","1,034",none
+1994,Rhode Island,"50,475","2,088",none
+1994,South Carolina,"47,184","1,801",none
+1994,South Dakota,"47,005","1,873",none
+1994,Tennessee,"45,276","1,625",none
+1994,Texas,"48,621","1,035",none
+1994,Utah,"56,464","1,646",none
+1994,Vermont,"56,600","3,013",none
+1994,Virginia,"59,516","2,420",none
+1994,Washington,"53,013","1,881",none
+1994,West Virginia,"37,253","1,924",none
+1994,Wisconsin,"55,945","2,011",none
+1993,United States,"50,421","236",none
+1993,Alabama,"40,480","1,756",none
+1993,Alaska,"69,287","2,652",none
+1993,Arizona,"49,241","1,808",none
+1993,Arkansas,"37,183","1,367",none
+1993,California,"54,991","1,051",none
+1993,Colorado,"55,661","2,532",none
+1993,Connecticut,"63,776","2,679",none
+1993,Delaware,"58,204","1,370",none
+1993,D.C.,"44,067","2,786",none
+1993,Florida,"46,077","1,141",none
+1993,Georgia,"51,102","2,024",none
+1993,Hawaii,"68,853","2,839",none
+1993,Idaho,"50,048","2,135",none
+1993,Illinois,"53,029","1,307",none
+1993,Indiana,"47,570","2,197",none
+1993,Iowa,"46,260","2,001",none
+1993,Kansas,"48,046","1,846",none
+1993,Kentucky,"39,341","1,761",none
+1993,Louisiana,"42,465","1,879",none
+1993,Maine,"44,283","1,942",none
+1993,Maryland,"64,458","2,069",none
+1993,Massachusetts,"59,818","1,532",none
+1993,Michigan,"52,714","1,101",none
+1993,Minnesota,"54,360","1,956",none
+1993,Mississippi,"35,815","1,984",none
+1993,Missouri,"46,290","2,366",none
+1993,Montana,"42,720","1,557",none
+1993,Nebraska,"50,044","1,344",none
+1993,Nevada,"57,801","1,740",none
+1993,New Hampshire,"61,271","2,615",none
+1993,New Jersey,"65,364","1,591",none
+1993,New Mexico,"43,185","1,377",none
+1993,New York,"51,156","897",none
+1993,North Carolina,"46,513","1,054",none
+1993,North Dakota,"45,380","1,348",none
+1993,Ohio,"50,492","1,062",none
+1993,Oklahoma,"42,382","2,408",none
+1993,Oregon,"53,482","1,872",none
+1993,Pennsylvania,"50,023","1,120",none
+1993,Rhode Island,"54,081","2,497",none
+1993,South Carolina,"42,047","1,549",none
+1993,South Dakota,"44,765","1,678",none
+1993,Tennessee,"40,513","1,341",none
+1993,Texas,"46,363","989",none
+1993,Utah,"57,756","2,004",none
+1993,Vermont,"50,136","1,543",none
+1993,Virginia,"58,800","2,239",none
+1993,Washington,"57,544","1,793",none
+1993,West Virginia,"36,186","1,583",none
+1993,Wisconsin,"51,268","2,163",none
+1992,United States,"50,667","240",none
+1992,Alabama,"42,682","1,750",none
+1992,Alaska,"69,133","1,912",none
+1992,Arizona,"48,553","1,799",none
+1992,Arkansas,"39,497","2,312",none
+1992,California,"57,724","1,040",none
+1992,Colorado,"53,723","2,433",none
+1992,Connecticut,"67,544","3,261",none
+1992,Delaware,"59,005","2,304",none
+1992,D.C.,"50,023","1,859",none
+1992,Florida,"45,231","870",none
+1992,Georgia,"47,625","2,031",none
+1992,Hawaii,"69,648","2,373",none
+1992,Idaho,"45,818","1,445",none
+1992,Illinois,"52,180","1,244",none
+1992,Indiana,"47,184","2,175",none
+1992,Iowa,"47,536","1,608",none
+1992,Kansas,"50,187","1,880",none
+1992,Kentucky,"38,840","2,082",none
+1992,Louisiana,"42,072","1,889",none
+1992,Maine,"48,981","1,697",none
+1992,Maryland,"61,527","2,689",none
+1992,Massachusetts,"60,132","1,221",none
+1992,Michigan,"53,364","1,259",none
+1992,Minnesota,"51,237","2,145",none
+1992,Mississippi,"34,019","1,776",none
+1992,Missouri,"45,250","2,400",none
+1992,Montana,"43,868","1,204",none
+1992,Nebraska,"49,694","1,771",none
+1992,Nevada,"52,770","1,316",none
+1992,New Hampshire,"65,220","3,179",none
+1992,New Jersey,"64,499","1,391",none
+1992,New Mexico,"42,768","2,228",none
+1992,New York,"51,353","875",none
+1992,North Carolina,"45,928","1,019",none
+1992,North Dakota,"44,586","1,490",none
+1992,Ohio,"51,937","971",none
+1992,Oklahoma,"41,815","1,778",none
+1992,Oregon,"52,802","3,372",none
+1992,Pennsylvania,"49,420","1,103",none
+1992,Rhode Island,"50,329","2,370",none
+1992,South Carolina,"45,609","2,372",none
+1992,South Dakota,"43,428","1,106",none
+1992,Tennessee,"40,218","1,510",none
+1992,Texas,"46,229","1,049",none
+1992,Utah,"56,645","1,894",none
+1992,Vermont,"54,171","2,205",none
+1992,Virginia,"63,173","2,248",none
+1992,Washington,"56,065","2,062",none
+1992,West Virginia,"33,525","1,475",none
+1992,Wisconsin,"55,086","1,814",none
+1991,United States,"51,086","244",none
+1991,Alabama,"41,285","1,811",none
+1991,Alaska,"68,868","3,090",none
+1991,Arizona,"52,123","1,521",none
+1991,Arkansas,"39,740","1,328",none
+1991,California,"57,086","1,162",none
+1991,Colorado,"53,415","2,111",none
+1991,Connecticut,"71,483","3,297",none
+1991,Delaware,"55,256","1,884",none
+1991,D.C.,"50,678","3,227",none
+1991,Florida,"46,213","805",none
+1991,Georgia,"46,145","1,845",none
+1991,Hawaii,"63,160","2,764",none
+1991,Idaho,"44,286","1,745",none
+1991,Illinois,"54,068","1,211",none
+1991,Indiana,"45,936","1,563",none
+1991,Iowa,"48,419","1,716",none
+1991,Kansas,"49,677","1,584",none
+1991,Kentucky,"40,298","1,774",none
+1991,Louisiana,"42,901","1,960",none
+1991,Maine,"47,257","2,125",none
+1991,Maryland,"62,662","2,403",none
+1991,Massachusetts,"60,562","1,340",none
+1991,Michigan,"54,463","1,168",none
+1991,Minnesota,"49,989","1,943",none
+1991,Mississippi,"33,025","1,786",none
+1991,Missouri,"47,356","2,399",none
+1991,Montana,"42,101","1,509",none
+1991,Nebraska,"50,108","1,708",none
+1991,Nevada,"55,853","2,652",none
+1991,New Hampshire,"61,102","2,271",none
+1991,New Jersey,"67,913","1,752",none
+1991,New Mexico,"45,005","2,026",none
+1991,New York,"53,915","912",none
+1991,North Carolina,"45,536","865",none
+1991,North Dakota,"43,907","1,580",none
+1991,Ohio,"50,517","1,287",none
+1991,Oklahoma,"43,177","1,830",none
+1991,Oregon,"51,195","1,843",none
+1991,Pennsylvania,"51,495","1,041",none
+1991,Rhode Island,"52,290","1,850",none
+1991,South Carolina,"46,571","1,928",none
+1991,South Dakota,"41,782","1,323",none
+1991,Tennessee,"41,466","1,552",none
+1991,Texas,"47,028","1,062",none
+1991,Utah,"47,508","2,305",none
+1991,Vermont,"49,440","2,072",none
+1991,Virginia,"61,280","2,266",none
+1991,Washington,"57,605","2,009",none
+1991,West Virginia,"39,252","1,557",none
+1991,Wisconsin,"52,794","1,726",none
+1990,United States,"52,623","269",none
+1990,Alabama,"41,049","1,822",none
+1990,Alaska,"69,064","2,859",none
+1990,Arizona,"51,360","2,005",none
+1990,Arkansas,"40,045","1,724",none
+1990,California,"58,506","993",none
+1990,Colorado,"54,012","1,592",none
+1990,Connecticut,"68,312","3,685",none
+1990,Delaware,"54,137","1,956",none
+1990,D.C.,"48,140","2,745",none
+1990,Florida,"46,898","798",none
+1990,Georgia,"48,437","2,084",none
+1990,Hawaii,"68,402","2,485",none
+1990,Idaho,"44,472","1,714",none
+1990,Illinois,"57,191","1,272",none
+1990,Indiana,"47,325","1,931",none
+1990,Iowa,"47,957","1,733",none
+1990,Kansas,"52,578","2,072",none
+1990,Kentucky,"43,550","2,132",none
+1990,Louisiana,"39,376","2,777",none
+1990,Maine,"48,267","2,763",none
+1990,Maryland,"68,289","2,805",none
+1990,Massachusetts,"63,702","1,455",none
+1990,Michigan,"52,613","1,165",none
+1990,Minnesota,"55,298","1,807",none
+1990,Mississippi,"35,462","1,409",none
+1990,Missouri,"48,035","2,450",none
+1990,Montana,"41,080","1,728",none
+1990,Nebraska,"48,298","1,982",none
+1990,Nevada,"56,279","2,072",none
+1990,New Hampshire,"71,713","2,308",none
+1990,New Jersey,"68,073","1,518",none
+1990,New Mexico,"44,005","1,842",none
+1990,New York,"55,520","898",none
+1990,North Carolina,"46,272","977",none
+1990,North Dakota,"44,400","1,763",none
+1990,Ohio,"52,746","1,265",none
+1990,Oklahoma,"42,854","1,835",none
+1990,Oregon,"51,460","1,698",none
+1990,Pennsylvania,"50,975","1,209",none
+1990,Rhode Island,"56,182","2,065",none
+1990,South Carolina,"50,500","2,431",none
+1990,South Dakota,"43,182","1,508",none
+1990,Tennessee,"39,704","1,527",none
+1990,Texas,"49,609","1,258",none
+1990,Utah,"52,973","1,789",none
+1990,Vermont,"54,653","2,339",none
+1990,Virginia,"61,639","1,842",none
+1990,Washington,"56,435","2,177",none
+1990,West Virginia,"38,905","2,007",none
+1990,Wisconsin,"53,973","1,576",none
+1989,United States,"53,306","293",none
+1989,Alabama,"39,250","1,973",none
+1989,Alaska,"66,399","2,541",none
+1989,Arizona,"52,653","2,231",none
+1989,Arkansas,"39,525","1,687",none
+1989,California,"60,872","1,140",none
+1989,Colorado,"49,433","2,578",none
+1989,Connecticut,"78,045","2,936",none
+1989,Delaware,"59,137","2,089",none
+1989,D.C.,"49,334","1,872",none
+1989,Florida,"48,104","876",none
+1989,Georgia,"50,791","1,883",none
+1989,Hawaii,"64,609","2,449",none
+1989,Idaho,"45,465","1,757",none
+1989,Illinois,"57,721","1,149",none
+1989,Indiana,"47,759","1,885",none
+1989,Iowa,"48,436","1,461",none
+1989,Kansas,"49,537","1,674",none
+1989,Kentucky,"42,937","2,224",none
+1989,Louisiana,"42,158","3,425",none
+1989,Maine,"52,043","2,561",none
+1989,Maryland,"66,418","2,189",none
+1989,Massachusetts,"66,547","1,298",none
+1989,Michigan,"56,753","1,457",none
+1989,Minnesota,"55,665","2,357",none
+1989,Mississippi,"36,729","1,746",none
+1989,Missouri,"48,864","1,376",none
+1989,Montana,"43,691","2,418",none
+1989,Nebraska,"48,535","2,805",none
+1989,Nevada,"54,106","1,748",none
+1989,New Hampshire,"69,213","2,528",none
+1989,New Jersey,"72,142","1,748",none
+1989,New Mexico,"41,681","1,898",none
+1989,New York,"58,082","835",none
+1989,North Carolina,"48,696","953",none
+1989,North Dakota,"46,525","1,665",none
+1989,Ohio,"53,518","1,208",none
+1989,Oklahoma,"43,645","2,279",none
+1989,Oregon,"52,611","2,646",none
+1989,Pennsylvania,"52,908","1,261",none
+1989,Rhode Island,"55,552","2,497",none
+1989,South Carolina,"43,886","1,953",none
+1989,South Dakota,"44,458","1,842",none
+1989,Tennessee,"41,697","2,407",none
+1989,Texas,"47,737","1,031",none
+1989,Utah,"56,646","1,870",none
+1989,Vermont,"57,712","2,095",none
+1989,Virginia,"62,917","2,222",none
+1989,Washington,"58,940","2,715",none
+1989,West Virginia,"39,975","1,555",none
+1989,Wisconsin,"53,706","2,287",none
+1988,United States,"52,372","267",none
+1988,Alabama,"38,373","1,754",none
+1988,Alaska,"63,679","2,276",none
+1988,Arizona,"50,852","1,622",none
+1988,Arkansas,"38,804","1,358",none
+1988,California,"58,262","1,220",none
+1988,Colorado,"50,427","2,472",none
+1988,Connecticut,"69,662","2,487",none
+1988,Delaware,"58,682","2,245",none
+1988,D.C.,"51,441","1,439",none
+1988,Florida,"48,873","914",none
+1988,Georgia,"51,104","1,724",none
+1988,Hawaii,"63,527","2,851",none
+1988,Idaho,"45,110","1,931",none
+1988,Illinois,"56,795","1,450",none
+1988,Indiana,"50,579","1,791",none
+1988,Iowa,"46,755","2,074",none
+1988,Kansas,"49,181","2,218",none
+1988,Kentucky,"38,295","1,541",none
+1988,Louisiana,"39,430","2,835",none
+1988,Maine,"50,789","1,812",none
+1988,Maryland,"70,314","2,301",none
+1988,Massachusetts,"63,891","1,614",none
+1988,Michigan,"56,694","1,168",none
+1988,Minnesota,"55,954","2,003",none
+1988,Mississippi,"34,945","1,708",none
+1988,Missouri,"45,097","2,093",none
+1988,Montana,"42,765","1,595",none
+1988,Nebraska,"48,398","1,847",none
+1988,Nevada,"53,830","1,839",none
+1988,New Hampshire,"66,607","2,172",none
+1988,New Jersey,"69,804","1,266",none
+1988,New Mexico,"37,119","1,602",none
+1988,New York,"55,623","1,285",none
+1988,North Carolina,"46,966","1,031",none
+1988,North Dakota,"46,345","1,941",none
+1988,Ohio,"53,363","1,223",none
+1988,Oklahoma,"45,528","1,454",none
+1988,Oregon,"53,378","2,212",none
+1988,Pennsylvania,"51,443","956",none
+1988,Rhode Island,"57,406","3,047",none
+1988,South Carolina,"49,117","2,212",none
+1988,South Dakota,"42,886","1,352",none
+1988,Tennessee,"40,120","1,956",none
+1988,Texas,"48,021","1,120",none
+1988,Utah,"50,618","1,749",none
+1988,Vermont,"55,763","2,072",none
+1988,Virginia,"62,804","2,537",none
+1988,Washington,"62,187","1,981",none
+1988,West Virginia,"37,229","1,789",none
+1988,Wisconsin,"56,893","1,881",none
+1987,United States,"51,973","253",none
+1987,Alabama,"39,355","2,287",none
+1987,Alaska,"66,275","2,985",none
+1987,Arizona,"53,345","1,779",none
+1987,Arkansas,"37,546","2,010",none
+1987,California,"60,119","1,073",none
+1987,Colorado,"52,800","2,144",none
+1987,Connecticut,"65,536","2,716",none
+1987,Delaware,"58,320","1,745",none
+1987,D.C.,"54,753","2,563",none
+1987,Florida,"48,838","949",none
+1987,Georgia,"53,275","2,752",none
+1987,Hawaii,"69,843","2,142",none
+1987,Idaho,"41,391","1,663",none
+1987,Illinois,"54,013","1,069",none
+1987,Indiana,"44,909","1,883",none
+1987,Iowa,"44,253","1,819",none
+1987,Kansas,"51,019","1,795",none
+1987,Kentucky,"41,227","1,873",none
+1987,Louisiana,"42,576","1,711",none
+1987,Maine,"47,065","2,032",none
+1987,Maryland,"69,739","2,768",none
+1987,Massachusetts,"64,297","1,428",none
+1987,Michigan,"55,245","1,444",none
+1987,Minnesota,"56,003","2,220",none
+1987,Mississippi,"36,920","1,797",none
+1987,Missouri,"47,304","2,327",none
+1987,Montana,"40,831","1,593",none
+1987,Nebraska,"46,403","1,518",none
+1987,Nevada,"53,602","2,250",none
+1987,New Hampshire,"64,491","2,892",none
+1987,New Jersey,"68,286","1,583",none
+1987,New Mexico,"41,397","1,238",none
+1987,New York,"52,617","909",none
+1987,North Carolina,"45,389","1,081",none
+1987,North Dakota,"45,023","1,805",none
+1987,Ohio,"51,398","1,107",none
+1987,Oklahoma,"43,258","1,763",none
+1987,Oregon,"49,932","2,178",none
+1987,Pennsylvania,"50,702","1,079",none
+1987,Rhode Island,"56,422","2,872",none
+1987,South Carolina,"49,954","2,265",none
+1987,South Dakota,"42,181","1,191",none
+1987,Tennessee,"42,237","1,585",none
+1987,Texas,"49,300","1,270",none
+1987,Utah,"52,906","2,381",none
+1987,Vermont,"50,684","2,740",none
+1987,Virginia,"59,820","2,020",none
+1987,Washington,"54,481","2,210",none
+1987,West Virginia,"34,315","1,552",none
+1987,Wisconsin,"52,587","2,812",none
+1986,United States,"51,329","266",none
+1986,Alabama,"39,443","1,825",none
+1986,Alaska,"64,645","2,097",none
+1986,Arizona,"52,572","1,480",none
+1986,Arkansas,"38,615","1,577",none
+1986,California,"59,808","1,175",none
+1986,Colorado,"56,060","1,909",none
+1986,Connecticut,"67,459","3,309",none
+1986,Delaware,"52,832","2,499",none
+1986,D.C.,"50,143","2,581",none
+1986,Florida,"47,107","1,113",none
+1986,Georgia,"50,242","2,293",none
+1986,Hawaii,"59,794","2,486",none
+1986,Idaho,"42,777","1,402",none
+1986,Illinois,"54,656","1,307",none
+1986,Indiana,"46,857","1,462",none
+1986,Iowa,"46,303","1,546",none
+1986,Kansas,"49,327","1,612",none
+1986,Kentucky,"40,973","2,074",none
+1986,Louisiana,"43,068","1,971",none
+1986,Maine,"48,292","2,000",none
+1986,Maryland,"63,095","2,136",none
+1986,Massachusetts,"62,548","1,515",none
+1986,Michigan,"54,850","1,336",none
+1986,Minnesota,"54,516","2,371",none
+1986,Mississippi,"34,044","1,317",none
+1986,Missouri,"45,202","1,592",none
+1986,Montana,"41,909","1,544",none
+1986,Nebraska,"44,886","1,678",none
+1986,Nevada,"54,050","1,845",none
+1986,New Hampshire,"62,979","1,709",none
+1986,New Jersey,"65,385","1,736",none
+1986,New Mexico,"40,913","1,429",none
+1986,New York,"51,593","977",none
+1986,North Carolina,"45,070","1,439",none
+1986,North Dakota,"44,342","1,618",none
+1986,Ohio,"51,778","1,212",none
+1986,Oklahoma,"43,187","1,796",none
+1986,Oregon,"51,073","2,066",none
+1986,Pennsylvania,"49,082","1,021",none
+1986,Rhode Island,"54,716","2,185",none
+1986,South Carolina,"45,290","1,781",none
+1986,South Dakota,"41,023","1,369",none
+1986,Tennessee,"37,637","1,822",none
+1986,Texas,"49,814","1,060",none
+1986,Utah,"54,182","1,670",none
+1986,Vermont,"50,714","2,068",none
+1986,Virginia,"61,262","2,214",none
+1986,Washington,"55,419","1,959",none
+1986,West Virginia,"33,943","1,866",none
+1986,Wisconsin,"54,489","1,656",none
+1985,United States,"49,574","269",none
+1985,Alabama,"38,480","1,595",none
+1985,Alaska,"73,007","2,286",none
+1985,Arizona,"50,117","1,562",none
+1985,Arkansas,"36,629","1,604",none
+1985,California,"56,632","735",none
+1985,Colorado,"59,153","1,784",none
+1985,Connecticut,"65,257","2,370",none
+1985,Delaware,"48,234","2,867",none
+1985,D.C.,"44,238","1,587",none
+1985,Florida,"44,798","917",none
+1985,Georgia,"44,181","1,654",none
+1985,Hawaii,"60,788","3,035",none
+1985,Idaho,"43,577","1,255",none
+1985,Illinois,"52,201","1,098",none
+1985,Indiana,"47,594","1,314",none
+1985,Iowa,"43,925","1,268",none
+1985,Kansas,"47,831","2,168",none
+1985,Kentucky,"36,440","1,570",none
+1985,Louisiana,"44,454","1,528",none
+1985,Maine,"43,069","1,685",none
+1985,Maryland,"63,255","2,028",none
+1985,Massachusetts,"59,206","1,700",none
+1985,Michigan,"50,883","1,759",none
+1985,Minnesota,"50,073","2,145",none
+1985,Mississippi,"34,450","1,299",none
+1985,Missouri,"46,049","1,276",none
+1985,Montana,"42,475","1,679",none
+1985,Nebraska,"45,756","1,918",none
+1985,Nevada,"48,852","2,109",none
+1985,New Hampshire,"55,419","2,254",none
+1985,New Jersey,"65,026","1,350",none
+1985,New Mexico,"42,867","2,151",none
+1985,New York,"49,618","1,098",none
+1985,North Carolina,"45,025","1,228",none
+1985,North Dakota,"44,509","1,698",none
+1985,Ohio,"52,840","1,184",none
+1985,Oklahoma,"44,509","1,604",none
+1985,Oregon,"45,955","2,187",none
+1985,Pennsylvania,"48,018","1,129",none
+1985,Rhode Island,"51,687","1,889",none
+1985,South Carolina,"42,055","1,809",none
+1985,South Dakota,"38,080","1,473",none
+1985,Tennessee,"37,316","1,169",none
+1985,Texas,"49,836","1,146",none
+1985,Utah,"52,974","1,473",none
+1985,Vermont,"54,573","1,977",none
+1985,Virginia,"59,672","2,779",none
+1985,Washington,"50,375","1,587",none
+1985,West Virginia,"33,548","1,738",none
+1985,Wisconsin,"48,793","2,437",none
+1984,United States,"48,664","221",none
+1984,Alabama,"37,581","1,313",none
+1984,Alaska,"70,246","3,198",none
+1984,Arizona,"46,514","1,322",none
+1984,Arkansas,"34,029","1,624",none
+1984,California,"54,899","790",none
+1984,Colorado,"56,015","1,748",none
+1984,Connecticut,"65,025","2,688",none
+1984,Delaware,"56,054","2,230",none
+1984,D.C.,"44,307","1,867",none
+1984,Florida,"42,954","1,016",none
+1984,Georgia,"43,386","1,769",none
+1984,Hawaii,"62,693","2,640",none
+1984,Idaho,"45,791","2,091",none
+1984,Illinois,"51,566","1,231",none
+1984,Indiana,"49,434","1,541",none
+1984,Iowa,"43,123","1,617",none
+1984,Kansas,"53,470","1,980",none
+1984,Kentucky,"38,384","2,343",none
+1984,Louisiana,"41,139","1,911",none
+1984,Maine,"44,828","1,919",none
+1984,Maryland,"64,497","2,499",none
+1984,Massachusetts,"58,529","1,505",none
+1984,Michigan,"49,858","1,379",none
+1984,Minnesota,"53,051","1,984",none
+1984,Mississippi,"33,499","1,589",none
+1984,Missouri,"45,103","1,552",none
+1984,Montana,"42,413","1,563",none
+1984,Nebraska,"46,454","1,661",none
+1984,Nevada,"55,961","2,210",none
+1984,New Hampshire,"56,260","1,596",none
+1984,New Jersey,"60,303","1,737",none
+1984,New Mexico,"44,788","2,234",none
+1984,New York,"47,821","905",none
+1984,North Carolina,"44,656","1,392",none
+1984,North Dakota,"45,095","2,254",none
+1984,Ohio,"50,201","1,068",none
+1984,Oklahoma,"45,913","1,559",none
+1984,Oregon,"46,458","1,617",none
+1984,Pennsylvania,"44,172","1,083",none
+1984,Rhode Island,"46,920","1,841",none
+1984,South Carolina,"44,092","2,028",none
+1984,South Dakota,"42,138","2,015",none
+1984,Tennessee,"36,434","1,251",none
+1984,Texas,"49,986","1,157",none
+1984,Utah,"50,058","1,596",none
+1984,Vermont,"49,018","2,134",none
+1984,Virginia,"57,587","1,897",none
+1984,Washington,"54,313","1,787",none
+1984,West Virginia,"36,567","1,320",none
+1984,Wisconsin,"45,034","1,782",none
