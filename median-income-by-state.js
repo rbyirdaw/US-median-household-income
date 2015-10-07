@@ -1,6 +1,6 @@
 
 var _vis = {};
-var dataset = [];
+
 //==============================================================================
 function init() {
 	_vis = {
@@ -157,11 +157,21 @@ function createDefPlot() {
 					return Number.parseFloat(d["median income"].replace(',',''));
 				})
 				.attr("text-anchor", "middle")
-				.attr("x", function(d) { return _vis.xScale(d.state); })
-				.attr("y", function(d) { 
-					return _vis.yScale(
+				.attr("x", function(d, i) { return _vis.xScale(d.state); })
+				.attr("y", function(d, i) {
+					var heightAdjust = 0;
+					var incomeDiff = 0;
+					
+					if ( (i > 0) && Math.abs(
+							incomeStrToNum(_vis.data[i-1]["median income"]) -
+							incomeStrToNum(d["median income"]) ) < 2000 ) {
+							heightAdjust = 20;
+					}
+
+
+					return _vis.yScale(						
 						Number.parseFloat(d["median income"].replace(',','')) 
-						) + 15; 
+						) - 5 + heightAdjust;;
 					})
 				.attr("fill","red")
 				.attr("font-size","10px");
@@ -301,10 +311,19 @@ function update(yearSelected) {
 					})
 					.attr("text-anchor", "middle")
 					.attr("x", function(d) { return _vis.xScale(d.state); })
-					.attr("y", function(d) { 
-						return _vis.yScale(
+					.attr("y", function(d, i) {
+						var heightAdjust = 0;
+						var incomeDiff = 0;
+						
+						if ( (i > 0) && Math.abs(
+								incomeStrToNum(_vis.data[i-1]["median income"]) -
+								incomeStrToNum(d["median income"]) ) < 2000 ) {
+								heightAdjust = 20;
+						}
+
+						return _vis.yScale(						
 							Number.parseFloat(d["median income"].replace(',','')) 
-							) + 15; 
+							) - 5 + heightAdjust;;
 						})
 					.attr("fill","red")
 					.attr("font-size","10px");
@@ -317,3 +336,8 @@ function update(yearSelected) {
 		.text(yearSelected);
 }
 
+//==============================================================================
+function incomeStrToNum(incomeStr) {
+	return +incomeStr.replace(',','');
+	
+}
