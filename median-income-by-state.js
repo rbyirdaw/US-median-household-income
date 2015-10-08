@@ -4,8 +4,9 @@ var _vis = {};
 //==============================================================================
 function init() {
 	_vis = {
-		paddingTop: 10,
-		margin: {top: 20, right: 20, bottom: 120, left: 60},
+		paddingTop: 0,
+
+		margin: {top: 20, right: 20, bottom: 120, left: 80},
 		width: 960,
 		height: 500,
 		
@@ -41,6 +42,8 @@ function init() {
 
 			//Build chart
 			createSVG();
+			//Top of plot has padding that depends on the largest data point
+			calcPaddingTop();
 			setupScales();
 			createDefPlot();
 			createAxes();				
@@ -84,7 +87,7 @@ function setupScales() {
 	_vis.yScale = d3.scale.linear()
 			.domain([0, d3.max(_vis.data, function(d) {				
 					return Number.parseFloat(d["median income"].replace(',',''));
-				})			
+				}) + _vis.paddingTop			
 			])
 			.range([_vis.height, 0]);
 	
@@ -115,7 +118,15 @@ function createAxes() {
 	
 	_vis.svg.append("g")
 			.attr("id", "yaxis")
-			.call(_vis.yAxis);
+			.call(_vis.yAxis)
+			.append("text")
+				.attr("x", "-50")
+				.attr("y", "-50")
+				.attr("text-anchor","end")
+				.attr("transform", "rotate(-90)")								
+				.text("Median household income (in 2014 dollars)")				
+				.attr("fill","black")
+				.attr("font-size","14px");				
 	
 }
 
@@ -265,7 +276,8 @@ function update(yearSelected) {
 			return d.year === yearSelected;
 		}
 	);
-	
+	//Recalculate paddingTop based on new data
+	calcPaddingTop();
 	
 	_vis.xScale.domain(_vis.data.map( function(d) { return d.state; } ));
 					
@@ -285,7 +297,7 @@ function update(yearSelected) {
 	
 	_vis.yScale.domain([0, d3.max(_vis.data, function(d) {				
 					return Number.parseFloat(d["median income"].replace(',',''));
-				})
+				}) + _vis.paddingTop
 			]);
 				
 	_vis.svg.select("#yaxis")
@@ -334,6 +346,16 @@ function update(yearSelected) {
 		
 	d3.select(".yearDisplay")
 		.text(yearSelected);
+}
+
+//==============================================================================
+function calcPaddingTop() {
+	
+	_vis.paddingTop = Math.floor(
+		d3.max(_vis.data, function(d) { 
+			return Number.parseFloat(d["median income"].replace(',',''));
+		}) / 10
+	);
 }
 
 //==============================================================================
