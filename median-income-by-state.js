@@ -165,7 +165,7 @@ function createDefPlot() {
 				.enter()
 				.append("text")
 				.text(function(d) {
-					return Number.parseFloat(d["median income"].replace(',',''));
+					return "$"+d["median income"];
 				})
 				.attr("text-anchor", "middle")
 				.attr("x", function(d, i) { return _vis.xScale(d.state); })
@@ -252,7 +252,7 @@ function sortBars(sortOrder) {
 					.transition()
 					.duration(1000)
 					.text(function(d) {
-						return Number.parseFloat(d["median income"].replace(',',''));
+						return "$"+d["median income"];
 					})
 					.attr("text-anchor", "middle")
 					.attr("x", function(d) { return _vis.xScale(d.state); })
@@ -300,7 +300,10 @@ function update(yearSelected) {
 				}) + _vis.paddingTop
 			]);
 				
+	//Update y axis along with its padding on data change - do transition
 	_vis.svg.select("#yaxis")
+		.transition()
+		.duration(1000)	
 		.call(_vis.yAxis);
 	
 	_vis.svg.selectAll("rect")
@@ -319,7 +322,7 @@ function update(yearSelected) {
 					.transition()
 					.duration(1000)
 					.text(function(d) {
-						return Number.parseFloat(d["median income"].replace(',',''));
+						return "$"+d["median income"];;
 					})
 					.attr("text-anchor", "middle")
 					.attr("x", function(d) { return _vis.xScale(d.state); })
