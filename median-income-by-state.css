@@ -19,3 +19,11 @@ input[name=yearSelect] {
 	font-family: Arial;
 	color: SkyBlue;
 }
+
+footer {
+	margin: 0 auto 0 auto;
+	text-align: right;
+	width: 80%;
+	font: 10px Consolas, Arial;
+	
+}
