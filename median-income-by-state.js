@@ -167,7 +167,7 @@ function createDefPlot() {
 				.text(function(d) {
 					return "$"+d["median income"];
 				})
-				.attr("text-anchor", "middle")
+				.attr("text-anchor", "start")
 				.attr("x", function(d, i) { return _vis.xScale(d.state); })
 				.attr("y", function(d, i) {
 					var heightAdjust = 0;
@@ -254,13 +254,21 @@ function sortBars(sortOrder) {
 					.text(function(d) {
 						return "$"+d["median income"];
 					})
-					.attr("text-anchor", "middle")
-					.attr("x", function(d) { return _vis.xScale(d.state); })
-					.attr("y", function(d) { 
-						return _vis.yScale(
-							Number.parseFloat(d["median income"].replace(',','')) 
-							) + 15; 
-						})
+					.attr("text-anchor", "start")
+					.attr("x", "0")
+					.attr("y", "0")
+					.attr("transform", function(d) {
+						var x = _vis.xScale(d.state) +
+							0.5 * _vis.xScale.rangeBand();
+						var y = _vis.yScale(
+								incomeStrToNum(d["median income"])
+								) - 5;
+								
+						var rot = (sortOrder == "state") ? 0 : -90;
+						return "translate("+x+", "+y+") rotate("+rot+")";
+						
+					})
+
 					.attr("fill","red")
 					.attr("font-size","10px");		
 		
@@ -340,6 +348,7 @@ function update(yearSelected) {
 							Number.parseFloat(d["median income"].replace(',','')) 
 							) - 5 + heightAdjust;;
 						})
+					.attr("transform", "")
 					.attr("fill","red")
 					.attr("font-size","10px");
 					
