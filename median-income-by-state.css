@@ -1,3 +1,11 @@
+
+.USavg {
+	fill: none;
+	stroke: SkyBlue;
+	stroke-width: 2;
+	stroke-dasharray: 5, 2;
+	
+}
 .svg-holder{
 	width: 1000px;
 	margin: 20px auto 20px auto;

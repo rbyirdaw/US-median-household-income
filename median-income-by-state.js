@@ -18,6 +18,8 @@ function init() {
 		
 		//Data being displayed - default is 2014
 		data: undefined,
+		
+		dataUSavg: [],
 		//Complete data
 		dataMaster: []
 	};
@@ -40,12 +42,14 @@ function init() {
 				}
 			);		
 
+
 			//Build chart
 			createSVG();
 			//Top of plot has padding that depends on the largest data point
 			calcPaddingTop();
 			setupScales();
 			createDefPlot();
+			plotUSavg();
 			createAxes();				
 
 		}
@@ -186,9 +190,51 @@ function createDefPlot() {
 					})
 				.attr("fill","red")
 				.attr("font-size","10px");
+				
+				
+	_vis.svg.append("g")
+			.attr("id", "USavg_g")
+			.append("path")
+			.attr("class", "USavg");
+			
 			
 }
+//==============================================================================
+function plotUSavg() {
+	
+	//data array has to be clear before pushing on values
+	_vis.dataUSavg = [];
+	
+	var USavg = _vis.data.filter(function(d) {
+		return d.state === "United States";
+	});
+	var USavgIncome = incomeStrToNum(USavg[0]["median income"]);
+	
+	for (i = 0; i < (_vis.data.length); i++) {
+		if(_vis.data[i].state !== "United States") {
+			_vis.dataUSavg.push(
+				[ _vis.data[i].state, 
+				USavgIncome ]
+			);
+		}
+	}
+	
 
+	
+	_vis.svg.select(".USavg")
+		.datum(_vis.dataUSavg)
+		.transition()
+		.duration(1300)			
+		.attr("d", d3.svg.line()
+						.x( function(d) { return _vis.xScale(d[0]); })
+						.y( function(d) { 
+								return _vis.yScale(d[1]);
+							}
+						)
+						.interpolate("linear")			
+		);
+	
+}
 //==============================================================================
 function sortBars(sortOrder) {
 
@@ -352,6 +398,9 @@ function update(yearSelected) {
 					.attr("fill","red")
 					.attr("font-size","10px");
 					
+
+	plotUSavg();
+	
 	//Reset radio-group as well
 	d3.select("input[value='state']")
 		.property("checked",true);
