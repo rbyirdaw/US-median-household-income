@@ -21,7 +21,9 @@ function init() {
 		
 		dataUSavg: [],
 		//Complete data
-		dataMaster: []
+		dataMaster: [],
+		
+		defYear: "2014"
 	};
 	
 	//Adjust width, height
@@ -36,9 +38,12 @@ function init() {
 				return console.log(error);
 			}
 
+			//Master data contains data for all years
 			_vis.dataMaster = data;
+			//Select data for current year only and without national average
 			_vis.data = _vis.dataMaster.filter(function(d) { 
-				return d.year === "2014";
+				return ( (d.year === _vis.defYear) && 
+					(d.state !== "United States") );
 				}
 			);		
 
@@ -49,7 +54,7 @@ function init() {
 			calcPaddingTop();
 			setupScales();
 			createDefPlot();
-			plotUSavg();
+			plotUSavg(_vis.defYear);
 			createAxes();				
 
 		}
@@ -198,13 +203,13 @@ function createDefPlot() {
 			
 }
 //==============================================================================
-function plotUSavg() {
+function plotUSavg(year) {
 	
 	//data array has to be clear before pushing on values
 	_vis.dataUSavg = [];
 	
-	var USavg = _vis.data.filter(function(d) {
-		return d.state === "United States";
+	var USavg = _vis.dataMaster.filter(function(d) {
+		return ( (d.year === year) && (d.state === "United States") );
 	});
 	var USavgIncome = incomeStrToNum(USavg[0]["median income"]);
 	
@@ -216,15 +221,13 @@ function plotUSavg() {
 			);
 		}
 	}
-	
 
-	
 	_vis.svg.select(".USavg")
 		.datum(_vis.dataUSavg)
 		.transition()
 		.duration(1300)			
 		.attr("d", d3.svg.line()
-						.x( function(d) { return _vis.xScale(d[0]); })
+						.x( function(d) { return _vis.xScale(d[0]) + 5; })
 						.y( function(d) { 
 								return _vis.yScale(d[1]);
 							}
@@ -325,7 +328,8 @@ function update(yearSelected) {
 
 	_vis.data = [];
 	_vis.data = _vis.dataMaster.filter(function(d) { 
-			return d.year === yearSelected;
+			return ( (d.year === yearSelected) && 
+				(d.state !== "United States") );
 		}
 	);
 	//Recalculate paddingTop based on new data
@@ -397,7 +401,7 @@ function update(yearSelected) {
 					.attr("font-size","10px");
 					
 
-	plotUSavg();
+	plotUSavg(yearSelected);
 	
 	//Reset radio-group as well
 	d3.select("input[value='state']")
