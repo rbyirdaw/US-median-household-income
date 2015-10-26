@@ -110,27 +110,25 @@ function createAxes() {
 
 			
 	_vis.svg.append("g")
-			.attr("id", "xaxis")
+			.attr("class", "x axis")
 			.attr("transform", "translate(0," + _vis.height + ")")
 			.call(_vis.xAxis)
 			.selectAll("text")
-				.attr("x", -10)
-				.attr("y", 0)
+				.attr("x", -7)
+				.attr("y", 5)
 				.attr("transform", "rotate(-45)")
 				.style("text-anchor", "end");
 	
 	
 	_vis.svg.append("g")
-			.attr("id", "yaxis")
+			.attr("class", "y axis")
 			.call(_vis.yAxis)
 			.append("text")
 				.attr("x", "-50")
 				.attr("y", "-50")
 				.attr("text-anchor","end")
 				.attr("transform", "rotate(-90)")								
-				.text("Median household income (in 2014 dollars)")				
-				.attr("fill","black")
-				.attr("font-size","14px");				
+				.text("Median household income (in 2014 dollars)");							
 	
 }
 
@@ -262,7 +260,7 @@ function sortBars(sortOrder) {
 	
 	_vis.xScale.domain(_vis.data.map( function(d) { return d.state; } ));
 					
-	_vis.svg.select("#xaxis")
+	_vis.svg.select(".x.axis")
 		.transition()
 		.duration(1000)	
 		.call(_vis.xAxis)
@@ -335,7 +333,7 @@ function update(yearSelected) {
 	
 	_vis.xScale.domain(_vis.data.map( function(d) { return d.state; } ));
 					
-	_vis.svg.select("#xaxis")
+	_vis.svg.select(".x.axis")
 		.transition()
 		.duration(1000)
 		.call(_vis.xAxis)
@@ -355,7 +353,7 @@ function update(yearSelected) {
 			]);
 				
 	//Update y axis along with its padding on data change - do transition
-	_vis.svg.select("#yaxis")
+	_vis.svg.select(".y.axis")
 		.transition()
 		.duration(1000)	
 		.call(_vis.yAxis);
