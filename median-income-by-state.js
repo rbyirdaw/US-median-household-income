@@ -6,7 +6,7 @@ function init() {
 	_vis = {
 		paddingTop: 0,
 
-		margin: {top: 20, right: 20, bottom: 120, left: 80},
+		margin: {top: 60, right: 20, bottom: 120, left: 80},
 		width: 960,
 		height: 500,
 		
@@ -78,9 +78,9 @@ function createSVG() {
 	//Insert svg before range input
 	_vis.svg = d3.select(".svg-holder")
 				.append("svg")		
-				.attr("width",_vis.width + _vis.margin.left + 
+				.attr("width", _vis.width + _vis.margin.left + 
 					_vis.margin.right)
-				.attr("height",_vis.height + _vis.margin.top + 
+				.attr("height", _vis.height + _vis.margin.top + 
 					_vis.margin.bottom)
 				.append("g")
 					.attr("transform", "translate(" + _vis.margin.left + 
@@ -91,7 +91,7 @@ function createSVG() {
 function setupScales() {
 	_vis.xScale = d3.scale.ordinal()
 			.domain(_vis.data.map( function(d) { return d.state; } ))
-			.rangeRoundBands([0, _vis.width], 0.05);
+			.rangeRoundBands([0, _vis.width], 0.25);
 			
 	_vis.yScale = d3.scale.linear()
 			.domain([0, d3.max(_vis.data, function(d) {				
@@ -147,14 +147,15 @@ function createDefPlot() {
 			.append("rect")
 				.attr("x", function(d) { return _vis.xScale(d.state); })
 				.attr("width", _vis.xScale.rangeBand())
-				.attr("y", function(d) { return _vis.yScale(
-						Number.parseFloat(d["median income"].replace(',','')) 
-					); })
+				.attr("y", function(d) { 
+						return _vis.yScale(incomeStrToNum(d["median income"])); 
+					}
+				)
 				.attr("height", function(d) { 
-					return _vis.height - _vis.yScale(
-						Number.parseFloat(d["median income"].replace(',','') ) 
-					); 
-				})
+						return _vis.height - 
+							_vis.yScale(incomeStrToNum(d["median income"])); 
+					}
+				)
 			   .on("click", function() {				   
 				   //default ordering is by state
 			   		sortBars("state");
@@ -187,19 +188,51 @@ function createDefPlot() {
 					}
 
 
-					return _vis.yScale(						
-						Number.parseFloat(d["median income"].replace(',','')) 
-						) - 5 + heightAdjust;;
-					})
+					return _vis.yScale(incomeStrToNum(d["median income"]))
+						- 5 + heightAdjust;
+					}
+				)
 				.attr("fill","red")
 				.attr("font-size","10px");
 				
-				
+	//show national average			
 	_vis.svg.append("g")
 			.attr("id", "USavg_g")
 			.append("path")
 			.attr("class", "USavg");
 			
+	//Add legend for national average
+	_vis.svg.selectAll(".legend")
+			.data(["National Average"])
+			.enter()
+			.append("g")
+			.attr("class", "legend");
+			//.attr("transform","translate(0, 20)");	
+
+	_vis.svg.selectAll(".legend")
+			.append("text")
+			.attr("x", _vis.width - 180)
+			.attr("y", 25)
+			.attr("text-anchor", "start")
+			.text( function (d) {
+				return d;
+			})
+			.style("font-size", "11");
+	
+	var line = d3.svg.line()
+		.x(function(d) { return d[0]; })
+		.y(function(d) { return d[1]; })
+		.interpolate("linear");
+		
+		
+	_vis.svg.selectAll(".legend")
+		.append("path")
+		  .attr("class", "USavg")
+		  .attr("d", line( [ 
+			[_vis.width - 225, 22],
+			[_vis.width - 185, 22]
+		  ] ) 
+	      );			
 			
 }
 //==============================================================================
@@ -212,28 +245,22 @@ function plotUSavg(year) {
 		return ( (d.year === year) && (d.state === "United States") );
 	});
 	var USavgIncome = incomeStrToNum(USavg[0]["median income"]);
-	
-	for (i = 0; i < (_vis.data.length); i++) {
-		if(_vis.data[i].state !== "United States") {
-			_vis.dataUSavg.push(
-				[ _vis.data[i].state, 
-				USavgIncome ]
-			);
-		}
-	}
 
+	_vis.dataUSavg = [ [10, USavgIncome], [_vis.width - 10, USavgIncome]];
+	
 	_vis.svg.select(".USavg")
 		.datum(_vis.dataUSavg)
 		.transition()
 		.duration(1300)			
 		.attr("d", d3.svg.line()
-						.x( function(d) { return _vis.xScale(d[0]) + 5; })
-						.y( function(d) { 
-								return _vis.yScale(d[1]);
-							}
+						.x( function(d) { return d[0]; }
+						)
+						.y( function(d) { return _vis.yScale(d[1]);	}
 						)
 						.interpolate("linear")			
 		);
+		
+		
 	
 }
 //==============================================================================
@@ -247,16 +274,16 @@ function sortBars(sortOrder) {
 	else if (sortOrder === "ascending") {
 		_vis.data.sort(function(a, b) {
 			return d3.ascending(
-				Number.parseFloat(a["median income"].replace(',','')),
-				Number.parseFloat(b["median income"].replace(',','')) 
+				  incomeStrToNum(a["median income"]),
+				  incomeStrToNum(b["median income"]) 
 				);	
 		});
 	}
 	else if (sortOrder === "descending") {
 		_vis.data.sort(function(a, b) {
 			return d3.descending(
-				Number.parseFloat(a["median income"].replace(',','')),
-				Number.parseFloat(b["median income"].replace(',','')) 
+				  incomeStrToNum(a["median income"]),
+				  incomeStrToNum(b["median income"]) 
 				);			
 		});
 	}	
@@ -284,12 +311,13 @@ function sortBars(sortOrder) {
 	    })
 		.duration(1000)
 		.attr("x", function(d) { return _vis.xScale(d.state); })
+		/*
 		.attr("y", function(d) { return _vis.yScale(
 			Number.parseFloat(d["median income"].replace(',','')) 
 			); })
 		.attr("height", function(d) { 
 			return _vis.height - _vis.yScale(Number.parseFloat(d["median income"].replace(',','') ) ); 
-		});		
+		})*/;		
 		
 		
 	//data labels
@@ -352,7 +380,7 @@ function update(yearSelected) {
 			
 	
 	_vis.yScale.domain([0, d3.max(_vis.data, function(d) {				
-					return Number.parseFloat(d["median income"].replace(',',''));
+					return incomeStrToNum(d["median income"]);
 				}) + _vis.paddingTop
 			]);
 				
@@ -367,9 +395,13 @@ function update(yearSelected) {
 		.transition()
 		.duration(1000)
 		.attr("x", function(d) { return _vis.xScale(d.state); })
-		.attr("y", function(d) { return _vis.yScale(Number.parseFloat(d["median income"].replace(',','')) ); })
+		.attr("y", function(d) { 
+				return _vis.yScale(incomeStrToNum(d["median income"])); 
+			}
+		)
 		.attr("height", function(d) { 
-			return _vis.height - _vis.yScale(Number.parseFloat(d["median income"].replace(',','') ) ); 
+			return _vis.height - 
+				_vis.yScale(incomeStrToNum(d["median income"])); 
 		});
 		
 	_vis.svg.select("#dataLabels")
@@ -392,9 +424,8 @@ function update(yearSelected) {
 								heightAdjust = 20;
 						}
 
-						return _vis.yScale(						
-							Number.parseFloat(d["median income"].replace(',','')) 
-							) - 5 + heightAdjust;;
+						return _vis.yScale(incomeStrToNum(d["median income"])) - 
+							5 + heightAdjust;;
 						})
 					.attr("transform", "")
 					.attr("fill","red")
@@ -416,8 +447,8 @@ function calcPaddingTop() {
 	
 	_vis.paddingTop = Math.floor(
 		d3.max(_vis.data, function(d) { 
-			return Number.parseFloat(d["median income"].replace(',',''));
-		}) / 10
+			return incomeStrToNum(d["median income"]);
+		}) / 5
 	);
 }
 
