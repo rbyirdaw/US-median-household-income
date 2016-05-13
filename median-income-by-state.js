@@ -142,6 +142,7 @@ function createDefPlot() {
 
 		
 	_vis.svg.selectAll("rect")
+			
 			.data(_vis.data)
 			.enter()
 			.append("rect")
@@ -156,14 +157,31 @@ function createDefPlot() {
 							_vis.yScale(incomeStrToNum(d["median income"])); 
 					}
 				)
-			   .on("click", function() {				   
-				   //default ordering is by state
-			   		sortBars("state");
+				.on("click", function() {
+					//default ordering is by state
+		   			sortBars("state");
 					//so reset radio-group as well
 					d3.select("input[value='state']")
 						.property("checked",true);
 
-			   });				
+				})
+				.on("mouseover", function(d, i) {
+					_vis.svg.append("text")
+						.attr("x", _vis.xScale(d.state))
+						.attr("y", _vis.yScale(incomeStrToNum(d["median income"])) )
+						.attr("id", "svg-tooltip-main")
+						
+						.append("tspan")
+						.attr("x", _vis.xScale(d.state))
+						.attr("y", _vis.yScale(incomeStrToNum(d["median income"])) - 25 )
+						.text(d.state)
+						.attr("fill", "SkyBlue")
+						.attr("font-size","16px");
+
+				})
+				.on("mouseout", function() {
+					d3.select("#svg-tooltip-main").remove();
+				});
 		
 
 	_vis.svg.append("g")
@@ -253,11 +271,9 @@ function plotUSavg(year) {
 		.transition()
 		.duration(1300)			
 		.attr("d", d3.svg.line()
-						.x( function(d) { return d[0]; }
-						)
-						.y( function(d) { return _vis.yScale(d[1]);	}
-						)
-						.interpolate("linear")			
+			.x( function(d) { return d[0]; } )
+			.y( function(d) { return _vis.yScale(d[1]); } )
+			.interpolate("linear")	
 		);
 		
 		
@@ -306,9 +322,9 @@ function sortBars(sortOrder) {
 
 	_vis.svg.selectAll("rect")
 		.transition()
-	    .delay(function(d, i) {
+		.delay(function(d, i) {
 	 	   return i * 50;
-	    })
+ 	        })
 		.duration(1000)
 		.attr("x", function(d) { return _vis.xScale(d.state); })
 		/*
