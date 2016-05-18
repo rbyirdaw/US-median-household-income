@@ -166,14 +166,15 @@ function createDefPlot() {
 
 				})
 				.on("mouseover", function(d, i) {
+					var xPos = (i > 45) ? _vis.xScale(d.state) - 35 : _vis.xScale(d.state);
 					_vis.svg.append("text")
-						.attr("x", _vis.xScale(d.state))
-						.attr("y", _vis.yScale(incomeStrToNum(d["median income"])) )
+						.attr("x", xPos)
+						.attr("y", 10)
 						.attr("id", "svg-tooltip-main")
 						
 						.append("tspan")
-						.attr("x", _vis.xScale(d.state))
-						.attr("y", _vis.yScale(incomeStrToNum(d["median income"])) - 25 )
+						.attr("x", xPos)
+						.attr("y", 15 )
 						.text(d.state)
 						.attr("fill", "SkyBlue")
 						.attr("font-size","16px");
@@ -230,7 +231,7 @@ function createDefPlot() {
 	_vis.svg.selectAll(".legend")
 			.append("text")
 			.attr("x", _vis.width - 180)
-			.attr("y", 25)
+			.attr("y", 35)
 			.attr("text-anchor", "start")
 			.text( function (d) {
 				return d;
@@ -247,8 +248,8 @@ function createDefPlot() {
 		.append("path")
 		  .attr("class", "USavg")
 		  .attr("d", line( [ 
-			[_vis.width - 225, 22],
-			[_vis.width - 185, 22]
+			[_vis.width - 225, 32],
+			[_vis.width - 185, 32]
 		  ] ) 
 	      );			
 			
