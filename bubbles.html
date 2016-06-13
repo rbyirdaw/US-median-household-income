@@ -2,10 +2,12 @@
 <html>
 	<head>
 		<title>Median Income by State (1985 to 2014)</title>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
-		<script src="median-income-by-state-bubbles.js"></script>
 		<link href="median-income-by-state.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+		<script src="median-income-by-state-bubbles.js"></script>
+
+
 	</head>
 	
 	<body onload="init()">
@@ -15,17 +17,6 @@
 		    <li role="presentation"  class="active"><a href="#">Bubbles</a></li>
 		  </ul>
 
-		<section class="controls">
-			<label title="sortLabel" style="display: block;">
-				Sort median income by [
-				<input type="radio" name="sortOptions" value="state" checked>
-				State
-				<input type="radio" name="sortOptions" value="ascending">Ascending
-			
-				<input type="radio" name="sortOptions" value="descending">Descending
-				]
-			</label>
-		</section>
 		<section class="svg-holder"></section>
 
 		<section class="controls">
