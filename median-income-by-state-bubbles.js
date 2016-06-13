@@ -7,8 +7,8 @@ function init() {
 		paddingTop: 0,
 
 		margin: {top: 1, right: 20, bottom: 20, left: 20},
-		width: 800,
-		height: 700,
+		width: 850,
+		height: 750,
 		
 		svg: undefined,
 		diameter: undefined,
@@ -67,7 +67,8 @@ function createSVG() {
 				
 	//Insert svg before range input
 	_vis.svg = d3.select(".svg-holder")
-				.append("svg")		
+				.append("svg")
+				.attr("class", "center-svg")
 				.attr("width", _vis.width + _vis.margin.left + 
 					_vis.margin.right)
 				.attr("height", _vis.height + _vis.margin.top + 
@@ -108,7 +109,7 @@ function create() {
 	
     //create the bubbles
 	_vis.nodes.append("circle")
-		.style("fill", function(d) { return _vis.color(d.value); });
+		.style("fill", function(d) { console.log(typeof d.value); return _vis.color(d.value); });
 
     
 	_vis.nodes.append("text")
