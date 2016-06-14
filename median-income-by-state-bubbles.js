@@ -7,8 +7,13 @@ function init() {
 		paddingTop: 0,
 
 		margin: {top: 1, right: 20, bottom: 20, left: 20},
+<<<<<<< HEAD
 		width: 850,
 		height: 750,
+=======
+		width: 800,
+		height: 700,
+>>>>>>> 5bcef154da857361b2c2996da0b0c603dc1ae1f7
 		
 		svg: undefined,
 		diameter: undefined,
