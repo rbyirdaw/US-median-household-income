@@ -41,8 +41,7 @@ function init() {
 			_vis.dataMaster = data;
 			//Select data for current year only and without national average
 			_vis.data = _vis.dataMaster.filter(function(d) { 
-				return ( (d.year === _vis.defYear) && 
-					(d.state !== "United States") );
+				return ( d.year === _vis.defYear );
 				}
 			);
 			
@@ -107,9 +106,14 @@ function create() {
 		.attr("transform", "translate(0,0)");
 		//.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 	
-    //create the bubbles
+	//create the bubbles
 	_vis.nodes.append("circle")
-		.style("fill", function(d) { console.log(typeof d.value); return _vis.color(d.value); });
+		.style("fill", function(d) { 
+			if (d.state === "United States")
+				return "#000";
+			else
+				return _vis.color(d.value);				
+		});
 
     
 	_vis.nodes.append("text")
@@ -168,8 +172,7 @@ function update(yearSelected) {
 
 	_vis.data = [];
 	_vis.data = _vis.dataMaster.filter(function(d) { 
-			return ( (d.year === yearSelected) && 
-				(d.state !== "United States") );
+			return ( d.year === yearSelected );
 		}
 	);
 
@@ -196,26 +199,6 @@ function update(yearSelected) {
 	plot();
 }
 
-//==============================================================================
-
-
-function plotUSavg(year) {
-	
-	//data array has to be clear before pushing on values
-	_vis.dataUSavg = [];
-	
-	var USavg = _vis.dataMaster.filter(function(d) {
-		return ( (d.year === year) && (d.state === "United States") );
-	});
-	var USavgIncome = incomeStrToNum(USavg[0]["median income"]);
-
-	_vis.dataUSavg = [ [10, USavgIncome], [_vis.width - 10, USavgIncome]];
-	
-
-		
-		
-	
-}
 //==============================================================================
 function incomeStrToNum(incomeStr) {
 	return +incomeStr.replace(',','');
