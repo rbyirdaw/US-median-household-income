@@ -45,6 +45,16 @@ function init() {
 				}
 			);
 			
+			_vis.color = d3.scale.linear()
+				.domain([
+					d3.min(_vis.data, function(d) { return incomeStrToNum(d["median income"]); }),
+					d3.max(_vis.data, function(d) { return incomeStrToNum(d["median income"]);})
+				] )
+				.range([
+				      "rgb(255,255,204)", "rgb(255,137,160)", "rgb(254,217,118)", "rgb(254,178,76)",
+				      "rgb(253,141,60)", "rgb(252,78,42)", "rgb(227,26,28)", "rgb(189,0,38)","rgb(128,0,38)"
+				]);
+
 			createSVG();
 			//create elements
 			create();
@@ -119,19 +129,30 @@ function create() {
 	_vis.nodes.append("text")
 		.attr("text-anchor", "middle")
 		.attr("class", "state")
-		.style({
-			"fill":"white", 
+		.style({			
 			"font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
-			"font-size": "12px"
+			"font-size": "12px",
+			"fill": function(d) {
+			if (d.state === "United States")
+				return "#fff";
+			else
+				return "#000";
+			}
 		});
+
 		
 	_vis.nodes.append("text")
 		.attr("text-anchor", "middle")
 		.attr("class", "income")
-		.style({
-			"fill":"white", 
+		.style({			
 			"font-family":"Helvetica Neue, Helvetica, Arial, san-serif",
-			"font-size": "12px"
+			"font-size": "12px",
+			"fill": function(d) {
+			if (d.state === "United States")
+				return "#fff";
+			else
+				return "#000";
+			}
 		});		
 
 	//first plot
@@ -175,6 +196,12 @@ function update(yearSelected) {
 			return ( d.year === yearSelected );
 		}
 	);
+
+	_vis.color
+		.domain([
+			d3.min(_vis.data, function(d) { return incomeStrToNum(d["median income"]); }),
+			d3.max(_vis.data, function(d) { return incomeStrToNum(d["median income"]);})
+		] );
 
 	var dataSet = [];
 	d3.map(_vis.data, function(d) {
