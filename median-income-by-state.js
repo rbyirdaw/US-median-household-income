@@ -23,7 +23,7 @@ function init() {
 		//Complete data
 		dataMaster: [],
 		
-		defYear: "2014"
+		defYear: "1999"
 	};
 	
 	//Adjust width, height
@@ -283,28 +283,27 @@ function plotUSavg(year) {
 //==============================================================================
 function sortBars(sortOrder) {
 
-	if (sortOrder === "state") {
-		_vis.data.sort(function(a, b) {
-			return d3.ascending(a.state, b.state);
-		});
-	}
-	else if (sortOrder === "ascending") {
-		_vis.data.sort(function(a, b) {
-			return d3.ascending(
-				  incomeStrToNum(a["median income"]),
-				  incomeStrToNum(b["median income"]) 
-				);	
-		});
-	}
-	else if (sortOrder === "descending") {
-		_vis.data.sort(function(a, b) {
-			return d3.descending(
-				  incomeStrToNum(a["median income"]),
-				  incomeStrToNum(b["median income"]) 
-				);			
-		});
-	}	
-	
+  //determine selected sort order
+  (sortOrder === "state") ? 
+    (_vis.data.sort(function(a, b) {
+	return d3.ascending(a.state, b.state);
+    }) ) :
+    ( (sortOrder === "ascending") ? 
+        (_vis.data.sort(function(a, b) {
+	  return d3.ascending(
+	    incomeStrToNum(a["median income"]),
+	    incomeStrToNum(b["median income"]) 
+	  );	
+	}) ) :
+        (_vis.data.sort(function(a, b) {
+	  return d3.descending(
+	    incomeStrToNum(a["median income"]),
+	    incomeStrToNum(b["median income"]) 
+	  );			
+	}) )
+    );
+
+  //redo x domain per sort selection 
 	_vis.xScale.domain(_vis.data.map( function(d) { return d.state; } ));
 					
 	_vis.svg.select(".x.axis")

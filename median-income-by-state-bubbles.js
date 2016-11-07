@@ -20,7 +20,7 @@ function init() {
 		//Complete data
 		dataMaster: [],
 		
-		defYear: "2014"
+		defYear: "1999"
 	};
 	
 	//Adjust width, height
