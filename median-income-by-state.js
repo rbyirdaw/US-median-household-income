@@ -304,6 +304,8 @@ function sortBars(sortOrder) {
     );
 
   //redo x domain per sort selection 
+
+/*
 	_vis.xScale.domain(_vis.data.map( function(d) { return d.state; } ));
 					
 	_vis.svg.select(".x.axis")
@@ -318,7 +320,9 @@ function sortBars(sortOrder) {
 			.attr("y", 0)
 			.attr("transform", "rotate(-45)")		
 			.style("text-anchor", "end");		
-		
+*/
+	//refactored above
+	updateXaxis();		
 
 	_vis.svg.selectAll("rect")
 		.transition()
@@ -366,6 +370,25 @@ function sortBars(sortOrder) {
 }
 
 //==============================================================================
+function updateXaxis() {
+  _vis.xScale.domain(_vis.data.map( function(d) { return d.state; } ));
+					
+  _vis.svg.select(".x.axis")
+      .transition()
+      .duration(1000)
+      .call(_vis.xAxis)
+      .delay(function(d, i) {
+        return i * 50;
+      })
+      .selectAll("text")
+      .attr("x", -10)
+      .attr("y", 0)
+      .attr("transform", "rotate(-45)")
+      .style("text-anchor", "end");	
+
+}
+
+//==============================================================================
 
 function update(yearSelected) {
 	
@@ -378,7 +401,8 @@ function update(yearSelected) {
 	);
 	//Recalculate paddingTop based on new data
 	calcPaddingTop();
-	
+
+/*	
 	_vis.xScale.domain(_vis.data.map( function(d) { return d.state; } ));
 					
 	_vis.svg.select(".x.axis")
@@ -393,7 +417,10 @@ function update(yearSelected) {
 			.attr("y", 0)
 			.attr("transform", "rotate(-45)")
 			.style("text-anchor", "end");	
-			
+*/			
+	//refactored above
+	updateXaxis();
+
 	
 	_vis.yScale.domain([0, d3.max(_vis.data, function(d) {				
 					return incomeStrToNum(d["median income"]);
