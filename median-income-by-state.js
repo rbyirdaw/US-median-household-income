@@ -324,6 +324,7 @@ function sortBars(sortOrder) {
 	//refactored above
 	updateXaxis();		
 
+/*
 	_vis.svg.selectAll("rect")
 		.transition()
 		.delay(function(d, i) {
@@ -331,7 +332,11 @@ function sortBars(sortOrder) {
  	        })
 		.duration(1000)
 		.attr("x", function(d) { return _vis.xScale(d.state); })
-		/*
+*/
+	//refactored above
+	updateBarsXpos();
+
+		/*DEL
 		.attr("y", function(d) { return _vis.yScale(
 			Number.parseFloat(d["median income"].replace(',','')) 
 			); })
@@ -389,6 +394,28 @@ function updateXaxis() {
 }
 
 //==============================================================================
+function updateYaxis() {
+
+  _vis.svg.select(".y.axis")
+      .transition()
+      .duration(1000)	
+      .call(_vis.yAxis);
+}
+
+
+//==============================================================================
+function updateBarsXpos() {
+  _vis.svg.selectAll("rect")
+      .transition()
+      .delay(function(d, i) {
+        return i * 50;
+      })
+      .duration(1000)
+      .attr("x", function(d) { return _vis.xScale(d.state); })
+
+}
+
+//==============================================================================
 
 function update(yearSelected) {
 	
@@ -428,10 +455,13 @@ function update(yearSelected) {
 			]);
 				
 	//Update y axis along with its padding on data change - do transition
-	_vis.svg.select(".y.axis")
+/*	_vis.svg.select(".y.axis")
 		.transition()
 		.duration(1000)	
 		.call(_vis.yAxis);
+*/
+	//refactored above
+	updateYaxis();
 	
 	_vis.svg.selectAll("rect")
 		.data(_vis.data)
