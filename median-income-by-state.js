@@ -396,6 +396,10 @@ function updateXaxis() {
 //==============================================================================
 function updateYaxis() {
 
+  _vis.yScale.domain([0, d3.max(_vis.data, function(d) {				
+    return incomeStrToNum(d["median income"]);
+  }) + _vis.paddingTop ]);
+
   _vis.svg.select(".y.axis")
       .transition()
       .duration(1000)	
@@ -449,10 +453,7 @@ function update(yearSelected) {
 	updateXaxis();
 
 	
-	_vis.yScale.domain([0, d3.max(_vis.data, function(d) {				
-					return incomeStrToNum(d["median income"]);
-				}) + _vis.paddingTop
-			]);
+
 				
 	//Update y axis along with its padding on data change - do transition
 /*	_vis.svg.select(".y.axis")
