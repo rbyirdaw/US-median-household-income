@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Median Income by State (1985 to 2014)</title>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+		<script src="median-income-by-state.js"></script>
+		<link href="median-income-by-state.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	</head>
+	
+	<body onload="init()">
+		<h1>U.S. Median Household Income by State (1985 to 2014)</h1>
+		<h3>Select Visualization Type</h3>
+		  <ul class="nav nav-tabs">
+		    <li role="presentation" class="active"><a href="bars.html">Bars</a></li>
+		    <li role="presentation" ><a href="bubbles.html">Bubbles</a></li>
+		  </ul>
+
+		<section class="controls">
+			<label title="sortLabel" style="display: block;">
+				Sort median income by [
+				<input type="radio" name="sortOptions" value="state" checked>
+				State
+				<input type="radio" name="sortOptions" value="ascending">Ascending
+			
+				<input type="radio" name="sortOptions" value="descending">Descending
+				]
+			</label>
+		</section>
+		<section class="svg-holder"></section>
+
+		<section class="controls">
+			<div class="yearDisplay">1999</div>
+			<input type="range" name="yearSelect" min="1984" max="2014" step="1" 
+				value="1999">
+		</section>
+
+		<footer>
+			Data from United States Census Bureau (census.gov).
+		</footer>
+
+            <script src="usmhiApp.js"></script>			
+
+	    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	</body>
+
+</html>
