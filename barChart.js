@@ -1,5 +1,5 @@
 
-function BarChart(svg, data) {
+function BarChart(svg, xData, yData) {
   
   this._svg = svg;
   this._xData = xData;
@@ -16,20 +16,14 @@ function BarChart(svg, data) {
 
 BarChart.prototype.createXscale = function(domainData, rangeValues) {
   this.xScale = d3.scale.ordinal()
-      .domain(domainData.map( function(d) {
-          return d;
-        })
-      )
+      .domain(domainData)
       .rangeRoundBands(rangeValues, 0.25);
 };
 
-BarChart.prototype.createYscale = function(domainData, rangeValues, paddingTop) {
+BarChart.prototype.createYscale = function(domainValues, rangeValues, paddingTop) {
   this.yScale = d3.scale.linear()
-      .domain([0, d3.max(domainData, function(d) {
-          return d;
-        }) + paddingTop
-      ])
-      .range(rangeValue);
+      .domain([domainValues[0], domainValues[1] + paddingTop])
+      .range(rangeValues);
 }
 
 BarChart.prototype.createXaxis = function() {
@@ -39,7 +33,7 @@ BarChart.prototype.createXaxis = function() {
 
   this._svg.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(0," + this._svg.height() + ")")
+      .attr("transform", "translate(0," + this._svg.attr("height") + ")")
       .call(this.xAxis)
       .selectAll("text")
       .attr("x", -7)
