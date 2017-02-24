@@ -1,9 +1,13 @@
 
-function BarChart(svg, xData, yData) {
+function BarChart(svg, xData, yData, plotWidth, plotHeight) {
   
   this._svg = svg;
   this._xData = xData;
   this._yData = yData;
+  this._plotWidth = plotWidth;
+  this._plotHeight = plotHeight;
+
+  this._bars = undefined;
 
   this.xAxis = undefined;
   this.yAxis = undefined;
@@ -14,33 +18,70 @@ function BarChart(svg, xData, yData) {
 
 }
 
+//=============================================================================
+
+BarChart.prototype.createBars = function() {
+
+  var self = this;
+
+  this._bars = this._svg.select("g").selectAll("rect");
+  this._bars
+      .data([self._xData, self._yData])
+      .enter()
+      .append("rect")
+      .attr("x", function(d, i) {
+        return self.xScale(d[0][i]);
+      })
+      .attr("y", function(d, i) { console.log(d[1][i]);
+        return self.yScale(d[1][i]);
+      })
+      .attr("height", function(d,i) {
+        return self._plotHeight - self.yScale(d[1][i]);
+      });
+
+};
+
+//=============================================================================
+
 BarChart.prototype.createXscale = function(domainData, rangeValues) {
   this.xScale = d3.scale.ordinal()
       .domain(domainData)
       .rangeRoundBands(rangeValues, 0.25);
 };
 
+//=============================================================================
+
 BarChart.prototype.createYscale = function(domainValues, rangeValues, paddingTop) {
   this.yScale = d3.scale.linear()
       .domain([domainValues[0], domainValues[1] + paddingTop])
       .range(rangeValues);
-}
+};
+
+//=============================================================================
 
 BarChart.prototype.createXaxis = function() {
+
+  var self = this;
+
   this.xAxis = d3.svg.axis()
       .scale(this.xScale)
       .orient("bottom");
 
-  this._svg.append("g")
+  this._svg
+      .select("g")
+      .append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(0," + this._svg.attr("height") + ")")
+
+      .attr("transform", "translate(0," + this._plotHeight + ")")
       .call(this.xAxis)
       .selectAll("text")
       .attr("x", -7)
       .attr("y", 5)
       .attr("transform", "rotate(-45)")
       .style("text-anchor", "end");
-}
+};
+
+//=============================================================================
 
 BarChart.prototype.createYaxis = function() {
   this.yAxis = d3.svg.axis()
@@ -48,7 +89,9 @@ BarChart.prototype.createYaxis = function() {
       .orient("left")
       .ticks(15, "s");
 
-  this._svg.append("g")
+  this._svg
+      .select("g")
+      .append("g")
       .attr("class", "y axis")
       .call(this.yAxis)
       .append("text")
@@ -56,8 +99,8 @@ BarChart.prototype.createYaxis = function() {
       .attr("y", "-50")
       .attr("text-anchor", "end")
       .attr("transform", "rotate(-90)")
-      .attr("Median Household Income (in 2014 Dollars)");
-}
+      .text("Median Household Income (in 2014 Dollars)");
+};
 
 
 
