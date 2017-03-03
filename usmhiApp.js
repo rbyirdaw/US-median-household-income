@@ -17,7 +17,7 @@
         var svgOpt = {
           parentElement: '.svg-holder', 
           width: 1000,
-          height: 400,
+          height: 500,
           margin: {top: 60, right: 20, bottom: 120, left: 80}
         }
           

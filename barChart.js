@@ -23,20 +23,25 @@ function BarChart(svg, xData, yData, plotWidth, plotHeight) {
 BarChart.prototype.createBars = function() {
 
   var self = this;
+  var xyData = [];
+  self._xData.forEach(function(xi, i) {
+    xyData[i] = [xi, self._yData[i]];
+  });
 
   this._bars = this._svg.select("g").selectAll("rect");
   this._bars
-      .data([self._xData, self._yData])
+      .data(xyData)
       .enter()
       .append("rect")
       .attr("x", function(d, i) {
-        return self.xScale(d[0][i]);
+        return self.xScale(d[0]);
       })
-      .attr("y", function(d, i) { console.log(d[1][i]);
-        return self.yScale(d[1][i]);
+      .attr("width", this.xScale.rangeBand())
+      .attr("y", function(d, i) { console.log(d[1]);
+        return self.yScale(d[1]);
       })
       .attr("height", function(d,i) {
-        return self._plotHeight - self.yScale(d[1][i]);
+        return self._plotHeight - self.yScale(d[1]);
       });
 
 };
