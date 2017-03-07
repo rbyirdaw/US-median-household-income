@@ -37,7 +37,7 @@ BarChart.prototype.createBars = function() {
         return self.xScale(d[0]);
       })
       .attr("width", this.xScale.rangeBand())
-      .attr("y", function(d, i) { console.log(d[1]);
+      .attr("y", function(d, i) { 
         return self.yScale(d[1]);
       })
       .attr("height", function(d,i) {

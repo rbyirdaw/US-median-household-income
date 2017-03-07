@@ -26,8 +26,11 @@
         var xData = defData.map(function(d) { return d.state; });
         var yData = defData.map(function(d) { 
           return Number.parseFloat(d["median income"].replace(',',''));
-	});
-        view.createBarChart(xData, yData);  
+        });
+
+        view.createBarChart(xData, yData); 
+
+        var controller = new usmhiApp.Controller(view);
 
       }
 

@@ -1,5 +1,9 @@
 
 function BarView() {
+  this.yearSelect = document.querySelector("[name='yearSelect']");
+  this.yearDisplay = document.querySelector("[name='yearDisplay']");
+  this.sortSelect = document.querySelector("[name='sortSelect']");
+
   this._svg = undefined;
   this._chart = undefined;
   this.paddingTop = 0;
@@ -8,6 +12,24 @@ function BarView() {
   this.plotHeight = 0;
 
 }
+
+//=============================================================================
+
+BarView.prototype.setListener = function(action, eveHandler) {
+
+  var self = this;
+
+  if (action === 'yearSelect') {
+    this.yearSelect.addEventListener("change", function() {
+      console.log("year change function for BarView - year is "+this.value);
+      self.yearDisplay.innerHTML = this.value;
+      eveHandler(this.value);
+    }, false);
+  } else if (action === 'sortSelect') {
+
+  }
+
+};
 
 //=============================================================================
 

@@ -9,11 +9,34 @@
   </head>
 
   <body>
+
+    <section class="controls">
+      <label title="sortLabel" style="display: block;">
+        Sort median income by [
+	<input type="radio" name="sortSelect" value="state" checked>State
+	<input type="radio" name="sortSelect" value="ascending">Ascending		
+	<input type="radio" name="sortSelect" value="descending">Descending
+	]
+      </label>
+    </section>
+
+
     <section class="svg-holder"></section>
+
+
+    <section class="controls">
+      <div class="yearDisplay" name="yearDisplay">1999</div>
+      <input type="range" name="yearSelect" min="1984" max="2014" step="1" value="1999">
+    </section>
+
+    <footer>
+      Data from United States Census Bureau (census.gov).
+    </footer>
 
 
     <script src="barView.js"></script>
     <script src="barChart.js"></script>
+    <script src="usmhiController.js"></script>
     <script src="usmhiApp.js"></script>
 
 
