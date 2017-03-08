@@ -9,6 +9,9 @@
 
         //console.log(data.length);
 
+        var pseudoStorage = usmhiApp.Storage.getInstance(data);
+        pseudoStorage.find(1999);
+
         var defData = data.filter(function(d) {
           return ( (d.year === "1999") && (d.state !== "United States") );
         });
