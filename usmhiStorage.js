@@ -3,14 +3,22 @@
 
   var MASTER_DATA;
 
+//=============================================================================
   function Storage(data) {
     MASTER_DATA = data;
   }
+
+//=============================================================================
   Storage.prototype.find = function(year) {
-    console.log('inside find with year = '+year);
-    console.log('master data length = '+MASTER_DATA.length);
+
+    var resultData = MASTER_DATA.filter(function(d) {
+      return ( (+d.year === year) && (d.state !== "United States") );
+    });
+
+    return resultData;
   };
 
+//=============================================================================
   var instance;
   var getInstance = function(data) {
     if (instance === undefined) {
