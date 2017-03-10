@@ -10,6 +10,7 @@
         var pseudoStorage = usmhiApp.Storage.getInstance(data);
 
         var defData = pseudoStorage.find(1999);
+        var model = new usmhiApp.Model(defData, pseudoStorage);
 
         var view = new BarView();
         var svgOpt = {
@@ -28,7 +29,7 @@
 
         view.createBarChart(xData, yData); 
 
-        var controller = new usmhiApp.Controller(view);
+        var controller = new usmhiApp.Controller(model, view);
 
       }
 

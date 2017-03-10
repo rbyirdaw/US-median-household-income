@@ -2,7 +2,7 @@
 function BarView() {
   this.yearSelect = document.querySelector("[name='yearSelect']");
   this.yearDisplay = document.querySelector("[name='yearDisplay']");
-  this.sortSelect = document.querySelector("[name='sortSelect']");
+  this.sortSelectors = document.querySelectorAll("[name='sortSelect']");
 
   this._svg = undefined;
   this._chart = undefined;
@@ -26,7 +26,12 @@ BarView.prototype.setListener = function(action, eveHandler) {
       eveHandler(this.value);
     }, false);
   } else if (action === 'sortSelect') {
-
+    for (i = 0; i < this.sortSelectors.length; i++) {
+      this.sortSelectors[i].addEventListener("change", function() {
+        //console.log("sort is "+this.value);
+        eveHandler(this.value);
+      }, false);
+    }
   }
 
 };
@@ -70,3 +75,26 @@ BarView.prototype.createBarChart = function(xData, yData) {
   this._chart.createBars();
   
 };
+
+//=============================================================================
+
+BarView.prototype.updateBarChart = function(updateOpt) {
+
+  if (updateOpt.type === 'sort') {
+
+    this._chart.sortBars(updateOpt.value);
+    this._chart.updateXscale();
+    this._chart.updateXaxis();
+    this._chart.updateBarsXpos();
+
+  } else if (updateOpt.type === 'year') {
+
+  }
+
+
+};
+
+
+//=============================================================================
+
+

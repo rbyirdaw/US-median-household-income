@@ -1,16 +1,26 @@
 
 function BarChart(svg, xData, yData, plotWidth, plotHeight) {
   
+  var self = this;
+
   this._svg = svg;
   this._xData = xData;
   this._yData = yData;
+
+  this._xyData = [];
+  xData.forEach(function(xi, i) {
+    self._xyData[i] = [xi, yData[i]];
+  });
+
   this._plotWidth = plotWidth;
   this._plotHeight = plotHeight;
 
   this._bars = undefined;
 
   this.xAxis = undefined;
+  this.xAxisGroup = undefined;
   this.yAxis = undefined;
+  this.yAxisGroup = undefined;
   this.xScale = undefined;
   this.yScale = undefined;
   this.dataLabels = undefined;
@@ -23,14 +33,12 @@ function BarChart(svg, xData, yData, plotWidth, plotHeight) {
 BarChart.prototype.createBars = function() {
 
   var self = this;
-  var xyData = [];
-  self._xData.forEach(function(xi, i) {
-    xyData[i] = [xi, self._yData[i]];
-  });
 
-  this._bars = this._svg.select("g").selectAll("rect");
-  this._bars
-      .data(xyData)
+
+  this._svg
+      .select("g")
+      .selectAll("rect")
+      .data(self._xyData)
       .enter()
       .append("rect")
       .attr("x", function(d, i) {
@@ -44,6 +52,44 @@ BarChart.prototype.createBars = function() {
         return self._plotHeight - self.yScale(d[1]);
       });
 
+  this._bars = this._svg.selectAll("rect");
+
+};
+
+//=============================================================================
+
+BarChart.prototype.updateBarsXpos = function() {
+
+  var self = this;
+
+  this._bars
+      .transition()
+      .delay(function(d, i) {
+        return i * 50;
+      })
+      .duration(1000)
+      .attr("x", function(d) {
+        return self.xScale(d[0]);
+      });
+}
+
+//=============================================================================
+
+BarChart.prototype.sortBars = function(order) {
+
+  if (order === 'state') {
+    this._xyData.sort(function(a, b) {
+      return d3.ascending(a[0], b[0]);
+    });
+  } else if (order === 'ascending') {
+    this._xyData.sort(function(a, b) {
+      return d3.ascending(a[1], b[1]);
+    });
+  } else if (order === 'descending') {
+    this._xyData.sort(function(a, b) {
+      return d3.descending(a[1], b[1]);
+    });
+  }
 };
 
 //=============================================================================
@@ -53,6 +99,15 @@ BarChart.prototype.createXscale = function(domainData, rangeValues) {
       .domain(domainData)
       .rangeRoundBands(rangeValues, 0.25);
 };
+
+//=============================================================================
+
+BarChart.prototype.updateXscale = function() {
+  this.xScale.domain(this._xyData.map(function(d) {
+//    console.log(d[0]+" "+d[1]);
+    return d[0];
+  }));
+}
 
 //=============================================================================
 
@@ -72,11 +127,12 @@ BarChart.prototype.createXaxis = function() {
       .scale(this.xScale)
       .orient("bottom");
 
-  this._svg
+  this.xAxisGroup = this._svg
       .select("g")
       .append("g")
       .attr("class", "x axis")
 
+  this.xAxisGroup
       .attr("transform", "translate(0," + this._plotHeight + ")")
       .call(this.xAxis)
       .selectAll("text")
@@ -84,6 +140,24 @@ BarChart.prototype.createXaxis = function() {
       .attr("y", 5)
       .attr("transform", "rotate(-45)")
       .style("text-anchor", "end");
+};
+
+//=============================================================================
+
+BarChart.prototype.updateXaxis = function() {
+
+  this.xAxisGroup
+      .transition()
+      .duration(1000)
+      .call(this.xAxis)
+      .delay(function(d, i) {
+        return i * 50;
+      })
+      .selectAll("text")
+      .attr("x", -10)
+      .attr("y", 0)
+      .attr("transform", "rotate(-45)")
+      .style("text-anchor", "end");	
 };
 
 //=============================================================================
