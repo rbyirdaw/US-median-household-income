@@ -24,6 +24,53 @@
       console.log(this.xDataOrder);
 
       this.view.updateBarChart(updateOpt);
+    } else if (updateOpt.type === 'year') {
+
+      //get data for given year
+      var newData,
+          xData = [],
+          yData = [],
+          xyData = [];
+      
+      this.model.read(updateOpt.value);
+      newData = this.model.getData();
+/*
+      if (this.xDataOrder === 'ascending') {
+        //need to sort new data
+        newData.sort(function(a, b) {
+          return d3.ascending(
+              Number.parseFloat(a["median income"].replace(',','')),
+              Number.parseFloat(b["median income"].replace(',',''))    
+          );
+        });
+      } else if (this.xDataOrder === 'descending') {
+        newData.sort(function(a, b) {
+          return d3.descending(
+              Number.parseFloat(a["median income"].replace(',','')),
+              Number.parseFloat(b["median income"].replace(',',''))    
+          );
+        });
+      }
+      
+*/
+      xData = newData.map(function(d) { return d.state; });
+      yData = newData.map(function(d) { 
+        return Number.parseFloat(d["median income"].replace(',',''));
+      });
+
+      xData.forEach(function(xi, i) {
+        xyData[i] = [xi, yData[i]];
+      });
+
+      this.view.updateBarChart({
+        type: 'year',
+        xyData: xyData,
+        xData: xData,
+        yData: yData
+      });
+
+      this.view.updateBarChart({type: 'sort', value: this.xDataOrder});
+
     }
       
   }

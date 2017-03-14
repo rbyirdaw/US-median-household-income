@@ -30,6 +30,30 @@ function BarChart(svg, xData, yData, plotWidth, plotHeight) {
 
 //=============================================================================
 
+BarChart.prototype.setXdata = function(xData) {
+  this._xData = xData;
+
+}
+
+//=============================================================================
+
+BarChart.prototype.setYdata = function(yData) {
+  this._yData = yData;
+
+}
+
+//=============================================================================
+
+BarChart.prototype.setXYdata = function(xyData) {
+
+  this._xyData = xyData;
+  this._bars
+      .data(xyData);
+
+};
+
+//=============================================================================
+
 BarChart.prototype.createBars = function() {
 
   var self = this;
@@ -71,7 +95,27 @@ BarChart.prototype.updateBarsXpos = function() {
       .attr("x", function(d) {
         return self.xScale(d[0]);
       });
-}
+};
+
+//=============================================================================
+
+BarChart.prototype.updateBarsYpos = function() {
+
+  var self = this;
+
+  this._bars
+      .transition()
+      .duration(1000)
+      .attr("y", function(d) {
+        return self.yScale(d[1]);
+      })
+      .attr("height", function(d) {
+        return self._plotHeight - self.yScale(d[1]);
+      });
+
+};
+
+
 
 //=============================================================================
 
@@ -109,6 +153,7 @@ BarChart.prototype.updateXscale = function() {
   }));
 }
 
+
 //=============================================================================
 
 BarChart.prototype.createYscale = function(domainValues, rangeValues, paddingTop) {
@@ -116,6 +161,14 @@ BarChart.prototype.createYscale = function(domainValues, rangeValues, paddingTop
       .domain([domainValues[0], domainValues[1] + paddingTop])
       .range(rangeValues);
 };
+
+//=============================================================================
+
+BarChart.prototype.updateYscale = function() {
+  this.yScale
+      .domain([0, d3.max(this._yData)]);
+};
+
 
 //=============================================================================
 
@@ -168,10 +221,12 @@ BarChart.prototype.createYaxis = function() {
       .orient("left")
       .ticks(15, "s");
 
-  this._svg
+  this.yAxisGroup = this._svg
       .select("g")
       .append("g")
-      .attr("class", "y axis")
+      .attr("class", "y axis");
+
+  this.yAxisGroup
       .call(this.yAxis)
       .append("text")
       .attr("x", "-50")
@@ -180,6 +235,19 @@ BarChart.prototype.createYaxis = function() {
       .attr("transform", "rotate(-90)")
       .text("Median Household Income (in 2014 Dollars)");
 };
+
+
+//=============================================================================
+
+BarChart.prototype.updateYaxis = function() {
+
+  this.yAxisGroup
+      .transition()
+      .duration(1000)
+      .call(this.yAxis);
+};
+
+
 
 
 
