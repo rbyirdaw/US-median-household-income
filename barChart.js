@@ -54,6 +54,37 @@ BarChart.prototype.setXYdata = function(xyData) {
 
 //=============================================================================
 
+BarChart.prototype.createDataLabels = function() {
+
+  var self = this;
+
+  this._svg
+      .select("g")
+      .append("g")
+      .attr("id", "dataLabels")
+      .selectAll("text")
+      .data(this._xyData)
+      .enter()
+      .append("text")
+      .text(function(d) {
+        return d[1];
+      })
+      .attr("text-anchor", "start")
+      .attr("x", function(d, i) {
+        return self.xScale(d[0]);
+      })
+      .attr("y", function(d, i) {
+        return self.yScale(d[1]) - 5;
+      })
+      .attr("fill", "tomato")
+      .attr("font-size", "11px");
+
+  this.dataLabels = this._svg.selectAll("#dataLabels");
+   
+
+};
+//=============================================================================
+
 BarChart.prototype.createBars = function() {
 
   var self = this;
@@ -89,7 +120,7 @@ BarChart.prototype.updateBarsXpos = function() {
   this._bars
       .transition()
       .delay(function(d, i) {
-        return i * 50;
+        return i * 25;
       })
       .duration(1000)
       .attr("x", function(d) {

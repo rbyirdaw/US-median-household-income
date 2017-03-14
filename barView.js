@@ -73,6 +73,8 @@ BarView.prototype.createBarChart = function(xData, yData) {
   this._chart.createYaxis();
 
   this._chart.createBars();
+
+  this._chart.createDataLabels();
   
 };
 
