@@ -95,6 +95,8 @@ BarView.prototype.updateBarChart = function(updateOpt) {
     this._chart.updateYaxis();
     this._chart.updateBarsYpos();
 
+    this._chart.updateDataLabels();
+
   }
 
   if (updateOpt.type === 'sort') {
@@ -103,6 +105,7 @@ BarView.prototype.updateBarChart = function(updateOpt) {
     this._chart.updateXscale();
     this._chart.updateXaxis();
     this._chart.updateBarsXpos();
+    this._chart.updateDataLabelsXpos();
 
   }
   

@@ -47,8 +47,6 @@ BarChart.prototype.setYdata = function(yData) {
 BarChart.prototype.setXYdata = function(xyData) {
 
   this._xyData = xyData;
-  this._bars
-      .data(xyData);
 
 };
 
@@ -79,10 +77,63 @@ BarChart.prototype.createDataLabels = function() {
       .attr("fill", "tomato")
       .attr("font-size", "11px");
 
-  this.dataLabels = this._svg.selectAll("#dataLabels");
+  this.dataLabels = this._svg.select("#dataLabels").selectAll("text");
    
 
 };
+
+//=============================================================================
+
+BarChart.prototype.updateDataLabelsXpos = function() {
+  var self = this;
+
+  this.dataLabels
+      .data(this._xyData)
+      .transition()
+      .duration(1000)
+      .text(function(d) {
+        return d[1];
+      })
+      .attr("text-anchor", "start")
+      .attr("x", "0")
+      .attr("y", "0")
+      .attr("transform", function(d) {
+        var x = self.xScale(d[0]) + 0.5 * self.xScale.rangeBand();
+        var y = self.yScale(d[1]) - 5;
+        
+        return "translate(" + x + "," + y + ")";
+       })
+      .attr("fill", "tomato")
+      .attr("font-size", "11px");
+
+};
+
+//=============================================================================
+BarChart.prototype.updateDataLabels = function() {
+
+  var self = this;
+
+  this.dataLabels
+      .data(this._xyData)
+      .transition()
+      .duration(1000)
+      .text(function(d) {
+        return d[1];
+      })
+      .attr("text-anchor", "start")
+      .attr("x", function(d, i) {
+        return self.xScale(d[0]);
+      })
+      .attr("y", function(d, i) {
+        return self.yScale(d[1]) - 5;
+      })
+      .attr("transform", "")
+      .attr("fill", "tomato")
+      .attr("font-size", "11px");
+
+};
+
+
 //=============================================================================
 
 BarChart.prototype.createBars = function() {
@@ -135,6 +186,7 @@ BarChart.prototype.updateBarsYpos = function() {
   var self = this;
 
   this._bars
+//      .data(self._xyData)
       .transition()
       .duration(1000)
       .attr("y", function(d) {
