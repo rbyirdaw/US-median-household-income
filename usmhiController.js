@@ -34,25 +34,7 @@
       
       this.model.read(updateOpt.value);
       newData = this.model.getData();
-/*
-      if (this.xDataOrder === 'ascending') {
-        //need to sort new data
-        newData.sort(function(a, b) {
-          return d3.ascending(
-              Number.parseFloat(a["median income"].replace(',','')),
-              Number.parseFloat(b["median income"].replace(',',''))    
-          );
-        });
-      } else if (this.xDataOrder === 'descending') {
-        newData.sort(function(a, b) {
-          return d3.descending(
-              Number.parseFloat(a["median income"].replace(',','')),
-              Number.parseFloat(b["median income"].replace(',',''))    
-          );
-        });
-      }
-      
-*/
+
       xData = newData.map(function(d) { return d.state; });
       yData = newData.map(function(d) { 
         return Number.parseFloat(d["median income"].replace(',',''));
@@ -69,13 +51,13 @@
         yData: yData
       });
 
-      this.view.updateBarChart({type: 'sort', value: this.xDataOrder});
+      if (this.xDataOrder === 'ascending' || this.xDataOrder === 'descending') {
+        this.view.updateBarChart({type: 'sort', value: this.xDataOrder});
+      }
 
     }
       
   }
-
-//=============================================================================
 
 
 //=============================================================================

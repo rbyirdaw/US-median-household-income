@@ -67,7 +67,7 @@ BarChart.prototype.createDataLabels = function() {
       .text(function(d) {
         return d[1];
       })
-      .attr("text-anchor", "start")
+      .attr("text-anchor", "middle")
       .attr("x", function(d, i) {
         return self.xScale(d[0]);
       })
@@ -94,7 +94,7 @@ BarChart.prototype.updateDataLabelsXpos = function() {
       .text(function(d) {
         return d[1];
       })
-      .attr("text-anchor", "start")
+      .attr("text-anchor", "middle")
       .attr("x", "0")
       .attr("y", "0")
       .attr("transform", function(d) {
@@ -120,7 +120,7 @@ BarChart.prototype.updateDataLabels = function() {
       .text(function(d) {
         return d[1];
       })
-      .attr("text-anchor", "start")
+      .attr("text-anchor", "middle")
       .attr("x", function(d, i) {
         return self.xScale(d[0]);
       })
@@ -186,7 +186,9 @@ BarChart.prototype.updateBarsYpos = function() {
   var self = this;
 
   this._bars
-//      .data(self._xyData)
+      .data(self._xyData);
+
+  this._bars
       .transition()
       .duration(1000)
       .attr("y", function(d) {
