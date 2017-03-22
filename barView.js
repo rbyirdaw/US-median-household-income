@@ -96,6 +96,7 @@ BarView.prototype.updateBarChart = function(updateOpt) {
     this._chart.updateBarsYpos();
 
     this._chart.updateDataLabels();
+    this._chart.updateDataLabelsYpos();
 
   }
 
