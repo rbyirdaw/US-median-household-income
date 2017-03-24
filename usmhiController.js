@@ -19,11 +19,12 @@
 //=============================================================================
 
   BarController.prototype.update = function(updateOpt) {
+
     if (updateOpt.type === 'sort') {
       this.xDataOrder = updateOpt.value;
-      console.log(this.xDataOrder);
-
+      console.log(updateOpt);
       this.view.updateBarChart(updateOpt);
+
     } else if (updateOpt.type === 'year') {
 
       //get data for given year
