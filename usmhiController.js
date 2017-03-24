@@ -22,8 +22,12 @@
 
     if (updateOpt.type === 'sort') {
       this.xDataOrder = updateOpt.value;
-      console.log(updateOpt);
-      this.view.updateBarChart(updateOpt);
+      //console.log(updateOpt);
+      this.view.updateBarChart({
+        type: 'sort', 
+        value: updateOpt.value,
+        fromOrder: this.xDataOrder
+      });
 
     } else if (updateOpt.type === 'year') {
 
@@ -49,12 +53,14 @@
         type: 'year',
         xyData: xyData,
         xData: xData,
-        yData: yData
+        yData: yData,
+        fromOrder: this.xDataOrder
       });
-
+/*
       if (this.xDataOrder === 'ascending' || this.xDataOrder === 'descending') {
         this.view.updateBarChart({type: 'sort', value: this.xDataOrder});
       }
+*/
 
     }
       
