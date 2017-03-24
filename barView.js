@@ -21,14 +21,12 @@ BarView.prototype.setListener = function(action, eveHandler) {
 
   if (action === 'yearSelect') {
     this.yearSelect.addEventListener("change", function() {
-      console.log("year change function for BarView - year is "+this.value);
       self.yearDisplay.innerHTML = this.value;
       eveHandler(+this.value);
     }, false);
   } else if (action === 'sortSelect') {
     for (i = 0; i < this.sortSelectors.length; i++) {
       this.sortSelectors[i].addEventListener("change", function() {
-        //console.log("sort is "+this.value);
         eveHandler(this.value);
       }, false);
     }
@@ -87,12 +85,16 @@ BarView.prototype.updateBarChart = function(updateOpt) {
     this._chart.setYdata(updateOpt.yData);
     this._chart.setXYdata(updateOpt.xyData);
 
-    this._chart.updateXscale();
-    this._chart.updateXaxis();
-    this._chart.updateBarsXpos();
+//  shouldn't need to handle X here
+//    this._chart.updateXscale();
+//    this._chart.updateXaxis();
 
     this._chart.updateYscale();
     this._chart.updateYaxis();
+
+    this._chart.updateBars();
+
+//    this._chart.updateBarsXpos();
     this._chart.updateBarsYpos();
 
     this._chart.updateDataLabels();
@@ -103,9 +105,12 @@ BarView.prototype.updateBarChart = function(updateOpt) {
   if (updateOpt.type === 'sort') {
 
     this._chart.sortBars(updateOpt.value);
+
     this._chart.updateXscale();
     this._chart.updateXaxis();
+
     this._chart.updateBarsXpos();
+
     this._chart.updateDataLabelsXpos();
 
   }

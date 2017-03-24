@@ -101,9 +101,9 @@ BarChart.prototype.updateDataLabelsYpos = function() {
         return d[1];
       })
       .attr("text-anchor", "middle")
-      .attr("x", function(d, i) {
+/*      .attr("x", function(d, i) {
         return self.xScale(d[0]);
-      })
+      })*/
       .attr("y", function(d, i) {
         return self.yScale(d[1]) - 5;
       })
@@ -119,6 +119,7 @@ BarChart.prototype.updateDataLabelsYpos = function() {
 
 BarChart.prototype.updateDataLabelsXpos = function() {
   var self = this;
+
 
   this.dataLabels
       .transition()
@@ -155,6 +156,9 @@ BarChart.prototype.createBars = function() {
       .data(self._xyData)
       .enter()
       .append("rect")
+      .attr("id", function(d) {
+        return d[0];
+      })
       .attr("x", function(d, i) {
         return self.xScale(d[0]);
       })
@@ -172,16 +176,26 @@ BarChart.prototype.createBars = function() {
 
 //=============================================================================
 
+BarChart.prototype.updateBars = function() {
+
+  this._bars
+      .data(this._xyData);
+};
+
+
+//=============================================================================
+
 BarChart.prototype.updateBarsXpos = function() {
 
   var self = this;
 
   this._bars
+/* can't transtion both x and y attributes at the same time
       .transition()
       .delay(function(d, i) {
         return i * 25;
       })
-      .duration(1000)
+      .duration(1000)*/
       .attr("x", function(d) {
         return self.xScale(d[0]);
       });
@@ -194,9 +208,6 @@ BarChart.prototype.updateBarsYpos = function() {
   var self = this;
 
   this._bars
-      .data(self._xyData);
-
-  this._bars
       .transition()
       .duration(1000)
       .attr("y", function(d) {
@@ -204,6 +215,10 @@ BarChart.prototype.updateBarsYpos = function() {
       })
       .attr("height", function(d) {
         return self._plotHeight - self.yScale(d[1]);
+      })
+      .attr("id", function(d) {
+        if (d[0]==="Ohio") { console.log(d[0]+" is "+d[1]); }
+        return d[0]+"$"+d[1];
       });
 
 };
@@ -227,6 +242,8 @@ BarChart.prototype.sortBars = function(order) {
       return d3.descending(a[1], b[1]);
     });
   }
+
+  console.log(this._xyData);
 };
 
 //=============================================================================
