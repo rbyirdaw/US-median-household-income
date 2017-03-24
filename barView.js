@@ -113,11 +113,11 @@ BarView.prototype.updateBarChart = function(updateOpt) {
 
     if (updateOpt.type === 'year') {
       this._chart.updateBarsXpos({animate: false});
+      this._chart.updateDataLabelsXpos({animate: false});
     } else {
       this._chart.updateBarsXpos();
+      this._chart.updateDataLabelsXpos();
     }
-
-    this._chart.updateDataLabelsXpos();
 
     if (updateOpt.fromOrder === 'state') {
       //labels rotate = 0, middle
