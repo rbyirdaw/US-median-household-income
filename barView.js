@@ -80,40 +80,65 @@ BarView.prototype.createBarChart = function(xData, yData) {
 
 BarView.prototype.updateBarChart = function(updateOpt) {
 
+
   if (updateOpt.type === 'year') {
     this._chart.setXdata(updateOpt.xData);
     this._chart.setYdata(updateOpt.yData);
     this._chart.setXYdata(updateOpt.xyData);
-
-//  shouldn't need to handle X here
-//    this._chart.updateXscale();
-//    this._chart.updateXaxis();
 
     this._chart.updateYscale();
     this._chart.updateYaxis();
 
     this._chart.updateBars();
 
-//    this._chart.updateBarsXpos();
     this._chart.updateBarsYpos();
 
     this._chart.updateDataLabels();
-    this._chart.updateDataLabelsYpos();
+    
+    if (updateOpt.fromOrder === 'state') {
+      this._chart.updateDataLabelsYpos();
+    } else {
+      this._chart.updateDataLabelsYpos({animate: false});
+    }
 
   }
 
-  if (updateOpt.type === 'sort') {
+  if ((updateOpt.type === 'sort') || 
+      ((updateOpt.type === 'year') &&  
+      (updateOpt.fromOrder === 'ascending') || 
+      (updateOpt.fromOrder === 'descending')) ) {
 
-    this._chart.sortBars(updateOpt.value);
+    var sortOrder = (updateOpt.type === 'sort') ? 
+        updateOpt.value : updateOpt.fromOrder;
+
+    this._chart.sortBars(sortOrder);
 
     this._chart.updateXscale();
     this._chart.updateXaxis();
 
-    this._chart.updateBarsXpos();
+    if (updateOpt.type === 'year') {
+      this._chart.updateBarsXpos({animate: false});
+      this._chart.updateDataLabelsXpos({animate: false});
+    } else {
+      this._chart.updateBarsXpos();
+      this._chart.updateDataLabelsXpos();
+    }
 
-    this._chart.updateDataLabelsXpos();
+    if (updateOpt.fromOrder === 'state') {
+      //labels rotate = 0, middle
+      this._chart.updateDataLabelsRot(0);
+    } else {
+      //labels rotate = 45, start
+      this._chart.updateDataLabelsRot(-45);
+
+    }
+
+
 
   }
+
+    
+
   
 
 

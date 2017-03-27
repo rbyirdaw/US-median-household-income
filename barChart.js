@@ -67,7 +67,7 @@ BarChart.prototype.createDataLabels = function() {
       .text(function(d) {
         return d[1];
       })
-      .attr("text-anchor", "middle")
+      .style("text-anchor", "middle")
       .attr("x", function(d, i) {
         return self.xScale(d[0]);
       })
@@ -89,27 +89,61 @@ BarChart.prototype.updateDataLabels = function() {
       .data(this._xyData);
 };
 
+
+//=============================================================================
+BarChart.prototype.updateDataLabelsRot = function(rot) {
+
+  var self = this;
+
+  if (rot === 0) {
+    this.dataLabels
+        .attr("transform", "");
+  } else {
+ 
+  this.dataLabels
+      .style("text-anchor", "middle")
+      .attr("transform", function(d) {
+        var x = self.xScale(d[0]),
+            y = self.yScale(d[1]);
+
+        return "translate(" + (x + 20) + "," + (y - 15) + ") rotate("+rot+")" 
+            + "translate(" + (-x) + "," + (-y) + ")";
+      });
+  }
+}
+
 //=============================================================================
 BarChart.prototype.updateDataLabelsYpos = function() {
 
   var self = this;
 
-  this.dataLabels
-      .transition()
-      .duration(1000)
-      .text(function(d) {
-        return d[1];
-      })
-      .attr("text-anchor", "middle")
-/*      .attr("x", function(d, i) {
-        return self.xScale(d[0]);
-      })*/
-      .attr("y", function(d, i) {
-        return self.yScale(d[1]) - 5;
-      })
-      .attr("transform", "")
-      .attr("fill", "tomato")
-      .attr("font-size", "11px");
+  if ((arguments.length === 1) && (arguments[0].animate === false)) {
+
+    this.dataLabels
+        .text(function(d) {
+          return d[1];
+        })
+        .style("text-anchor", "middle")
+        .attr("y", function(d, i) {
+          return self.yScale(d[1]) - 5;
+        })
+        .attr("fill", "tomato")
+        .attr("font-size", "11px");
+  } else {
+    this.dataLabels
+        .transition()
+        .duration(1000)
+        .text(function(d) {
+          return d[1];
+        })
+        .style("text-anchor", "middle")
+        .attr("y", function(d, i) {
+          return self.yScale(d[1]) - 5;
+        })
+        .attr("fill", "tomato")
+        .attr("font-size", "11px");
+  }
+
 
 };
 
@@ -120,24 +154,34 @@ BarChart.prototype.updateDataLabelsYpos = function() {
 BarChart.prototype.updateDataLabelsXpos = function() {
   var self = this;
 
+  if ((arguments.length === 1) && (arguments[0].animate === false)) {
 
-  this.dataLabels
-      .transition()
-      .duration(1000)
-      .text(function(d) {
-        return d[1];
-      })
-      .attr("text-anchor", "middle")
-      .attr("x", "0")
-      .attr("y", "0")
-      .attr("transform", function(d) {
-        var x = self.xScale(d[0]) + 0.5 * self.xScale.rangeBand();
-        var y = self.yScale(d[1]) - 5;
-        
-        return "translate(" + x + "," + y + ")";
-       })
-      .attr("fill", "tomato")
-      .attr("font-size", "11px");
+    this.dataLabels
+        .text(function(d) {
+          return d[1];
+        })
+        .attr("text-anchor", "middle")
+        .attr("x", function(d) { 
+          return self.xScale(d[0]);
+        })
+        .attr("fill", "tomato")
+        .attr("font-size", "11px");
+
+  } else {
+
+    this.dataLabels
+        .transition()
+        .duration(1000)
+        .text(function(d) {
+          return d[1];
+        })
+        .attr("text-anchor", "middle")
+        .attr("x", function(d) { 
+          return self.xScale(d[0]);
+        })
+        .attr("fill", "tomato")
+        .attr("font-size", "11px");
+  }
 
 };
 
@@ -189,16 +233,24 @@ BarChart.prototype.updateBarsXpos = function() {
 
   var self = this;
 
-  this._bars
-/* can't transtion both x and y attributes at the same time
-      .transition()
-      .delay(function(d, i) {
-        return i * 25;
-      })
-      .duration(1000)*/
-      .attr("x", function(d) {
-        return self.xScale(d[0]);
-      });
+  if ( (arguments.length === 1) && (arguments[0].animate === false) ) {
+    this._bars
+        .attr("x", function(d) {
+          return self.xScale(d[0]);
+        });
+  } else {
+    this._bars
+        .transition()
+        .delay(function(d, i) {
+          return i * 25;
+        })
+        .duration(1000)
+        .attr("x", function(d) {
+          return self.xScale(d[0]);
+        });
+
+  }
+
 };
 
 //=============================================================================
