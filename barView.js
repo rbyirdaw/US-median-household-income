@@ -94,7 +94,12 @@ BarView.prototype.updateBarChart = function(updateOpt) {
     this._chart.updateBarsYpos();
 
     this._chart.updateDataLabels();
-    this._chart.updateDataLabelsYpos();
+    
+    if (updateOpt.fromOrder === 'state') {
+      this._chart.updateDataLabelsYpos();
+    } else {
+      this._chart.updateDataLabelsYpos({animate: false});
+    }
 
   }
 
@@ -121,10 +126,14 @@ BarView.prototype.updateBarChart = function(updateOpt) {
 
     if (updateOpt.fromOrder === 'state') {
       //labels rotate = 0, middle
+      this._chart.updateDataLabelsRot(0);
     } else {
       //labels rotate = 45, start
+      this._chart.updateDataLabelsRot(-45);
 
     }
+
+
 
   }
 
